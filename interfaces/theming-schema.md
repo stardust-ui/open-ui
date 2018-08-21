@@ -1,3 +1,6 @@
+## Disclaimer
+This page is under development and shouldn't be reviewed until finalized.
+
 # Theming
 
 The expectation for theming is that we provide a few things:
@@ -33,25 +36,25 @@ TBD:
 | Name         | Description                                                                                |
 | ------------ | ------------------------------------------------------------------------------------------ |
 | createScheme | A utility helper to calculate a scheme given a palette and scheme name.                    |
-| createTheme  | Creates a custom theme definition.                                                         |
+| createTheme  | Creates a custom theme definition as well as a default set .                                                         |
 | getTheme     | Accessor for previously created. Returns default theme if no theme was previously created. |
 | loadTheme    | Applies the theme while filling in missing slots.                                          |
 
 
-# Color Schemes
+# Schemes
 
 The following scheme names are supported:
 
-| Scheme Name | Description                                                                                                                                                                                                                                                                               |
+| Scheme | Description                                                                                                                                                                                                                                                                               |
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Default     | Should themes allow default property configurability?                                                                                                                                                                                                                                     |
 | Neutral     | A variant where the background is a soft shade of the neutral color. Most other colors remain unchanged.                                                                                                                                                                                  |
 | Soft        | A variant where the background is a soft version of the primary color. Most other colors remain unchanged.                                                                                                                                                                                |
-| Strong      | A variant where the background is a strong version of the primary color. All colors change. <li>The background becomes shades of the primary color.</li> <li>The foreground/text becomes shades of the background color.</li><li>The primary color becomes shades of the background.</li> |
+| Strong      | An inverted variant where the background is a strong version of the primary color. All colors change. <li>The background becomes shades of the primary color.</li> <li>The foreground/text becomes shades of the background color.</li><li>The primary color becomes shades of the background.</li> |
 
 
 
-# Palette colors
+# Palette Colors
 
 Palettes break down into named variants of a theme color, an accent color, and neutrals.
 
@@ -107,81 +110,85 @@ Palettes break down into named variants of a theme color, an accent color, and n
 | green                |             |
 | greenLight           |             |
 
-# Semantic colors
+# Semantic Colors
 
-| Name                             | Description |
-| -------------------------------- | ----------- |
-| bodyBackground                   |             |
-| bodyStandoutBackground           |             |
-| bodyFrameBackground              |             |
-| bodyFrameDivider                 |             |
-| bodyText                         |             |
-| bodyTextChecked                  |             |
-| bodySubtext                      |             |
-| bodyDivider                      |             |
-| actionLink                       |             |
-| actionLinkHovered                |             |
-| link                             |             |
-| linkHovered                      |             |
-| disabledBackground               |             |
-| disabledText                     |             |
-| disabledBodyText                 |             |
-| disabledSubtext                  |             |
-| focusBorder                      |             |
-| variantBorder                    |             |
-| variantBorderHovered             |             |
-| defaultStateBackground           |             |
-| errorText                        |             |
-| warningText                      |             |
-| errorBackground                  |             |
-| blockingBackground               |             |
-| warningBackground                |             |
-| warningHighlight                 |             |
-| successBackground                |             |
-| inputBorder                      |             |
-| smallInputBorder                 |             |
-| inputBorderHovered               |             |
-| inputBackground                  |             |
-| inputBackgroundChecked           |             |
-| inputBackgroundCheckedHovered    |             |
-| inputForegroundChecked           |             |
-| inputFocusBorderAlt              |             |
-| inputPlaceholderText             |             |
-| buttonBackground                 |             |
-| buttonBackgroundHovered          |             |
-| buttonBackgroundChecked          |             |
-| buttonBackgroundCheckedHovered   |             |
-| buttonBackgroundPressed          |             |
-| buttonBorder                     |             |
-| buttonText                       |             |
-| buttonTextHovered                |             |
-| buttonTextChecked                |             |
-| buttonTextCheckedHovered         |             |
-| buttonTextPressed                |             |
-| buttonBorderDisabled             |             |
-| buttonTextDisabled               |             |
-| primaryButtonBackground          |             |
-| primaryButtonBackgroundHovered   |             |
-| primaryButtonBackgroundPressed   |             |
-| primaryButtonBorder              |             |
-| primaryButtonText                |             |
-| primaryButtonTextHovered         |             |
-| primaryButtonTextPressed         |             |
-| menuItemBackgroundHovered        |             |
-| menuIcon                         |             |
-| menuHeader                       |             |
-| listBackground                   |             |
-| listText                         |             |
-| listItemBackgroundHovered        |             |
-| listItemBackgroundChecked        |             |
-| listItemBackgroundCheckedHovered |             |
-| listHeaderBackgroundHovered      |             |
-| listHeaderBackgroundPressed      |             |
-
+| Name                             | Description                                                   | Detail |
+| -------------------------------- | ------------------------------------------------------------- | ------ |
+| bodyBackground                   | The default color for backgrounds.                            |        |
+| bodyStandoutBackground           | The standout color for highlighted content backgrounds.       |  For highlighted content when there is no emphasis, use the neutral variant instead. This should be a shade darker than bodyBackground in light themes, and a shade lighter in inverted themes.      |
+| bodyFrameBackground              | The color for chrome adjacent to an area with bodyBackground. |        |
+| bodyFrameDivider                 |                                                               |        |
+| bodyText                         |                                                               |        |
+| bodyTextChecked                  |                                                               |        |
+| bodySubtext                      |                                                               |        |
+| bodyDivider                      |                                                               |        |
+| actionLink                       |                                                               |        |
+| actionLinkHovered                |                                                               |        |
+| link                             |                                                               |        |
+| linkHovered                      |                                                               |        |
+| disabledBackground               |                                                               |        |
+| disabledText                     |                                                               |        |
+| disabledBodyText                 |                                                               |        |
+| disabledSubtext                  |                                                               |        |
+| focusBorder                      |                                                               |        |
+| variantBorder                    |                                                               |        |
+| variantBorderHovered             |                                                               |        |
+| defaultStateBackground           |                                                               |        |
+| errorText                        |                                                               |        |
+| warningText                      |                                                               |        |
+| errorBackground                  |                                                               |        |
+| blockingBackground               |                                                               |        |
+| warningBackground                |                                                               |        |
+| warningHighlight                 |                                                               |        |
+| successBackground                |                                                               |        |
+| inputBorder                      |                                                               |        |
+| smallInputBorder                 |                                                               |        |
+| inputBorderHovered               |                                                               |        |
+| inputBackground                  |                                                               |        |
+| inputBackgroundChecked           |                                                               |        |
+| inputBackgroundCheckedHovered    |                                                               |        |
+| inputForegroundChecked           |                                                               |        |
+| inputFocusBorderAlt              |                                                               |        |
+| inputPlaceholderText             |                                                               |        |
+| buttonBackground                 |                                                               |        |
+| buttonBackgroundHovered          |                                                               |        |
+| buttonBackgroundChecked          |                                                               |        |
+| buttonBackgroundCheckedHovered   |                                                               |        |
+| buttonBackgroundPressed          |                                                               |        |
+| buttonBorder                     |                                                               |        |
+| buttonText                       |                                                               |        |
+| buttonTextHovered                |                                                               |        |
+| buttonTextChecked                |                                                               |        |
+| buttonTextCheckedHovered         |                                                               |        |
+| buttonTextPressed                |                                                               |        |
+| buttonBorderDisabled             |                                                               |        |
+| buttonTextDisabled               |                                                               |        |
+| primaryButtonBackground          |                                                               |        |
+| primaryButtonBackgroundHovered   |                                                               |        |
+| primaryButtonBackgroundPressed   |                                                               |        |
+| primaryButtonBorder              |                                                               |        |
+| primaryButtonText                |                                                               |        |
+| primaryButtonTextHovered         |                                                               |        |
+| primaryButtonTextPressed         |                                                               |        |
+| menuItemBackgroundHovered        |                                                               |        |
+| menuIcon                         |                                                               |        |
+| menuHeader                       |                                                               |        |
+| listBackground                   |                                                               |        |
+| listText                         |                                                               |        |
+| listItemBackgroundHovered        |                                                               |        |
+| listItemBackgroundChecked        |                                                               |        |
+| listItemBackgroundCheckedHovered |                                                               |        |
+| listHeaderBackgroundHovered      |                                                               |        |
+| listHeaderBackgroundPressed      |                                                               |        |
 
 # Typography
 
 ## Font Families
+
+| Name      | Description |
+| --------- | ----------- |
+| default   |             |
+| monospace |             |
 
 ## Font Sizes
 
