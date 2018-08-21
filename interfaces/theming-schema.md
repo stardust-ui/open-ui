@@ -2,68 +2,225 @@
 
 The expectation for theming is that we provide a few things:
 
-1. A standard contract for an application to provide a theme
-2. A standard interface of what a theme is defined as
-3. A way for libraries to consume the theme to style their components
-4. This all needs to be done in a ui framework agnostic manner
+1. Methods allowing applications to create and provide themes.
+2. Utilities and calculators to aid in creating schemes.
+3. Standard interfaces for themes and theme elements.
+4. A way for libraries to consume themes to style their components.
+5. Provide all of these elements in a UI framework agnostic manner.
 
-# What is a theme?
+# Theme Definition: What is a theme?
 
 A theme consists of:
 
-- Palette colors - a set of named slots for colors which represent primary/accent colors and neutrals used across the application.
-
-- Named color schemes - each named scheme includes a set of named semantic slots (bg/fg/border/states) which reference palette colors.
-
-- Typography - how text is rendered in the site.
-
-- Sizing - the semantic sizing slots which content is laid out.
+| Theme Element   | Description                                                                                                                                            |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Palette         | A set of named slots for colors which represent primary/accent colors and neutrals used across the application.                                        |
+| Semantic Colors | A set of named slots for applying palette colors to components according to a variety of factors such as category, component name and component state. |
+| Schemes         | A set of named color schemes, each of which includes a set of named semantic slots (bg/fg/border/states) which reference palette colors.               |
+| Typography      | A definition for how text is rendered in the site.                                                                                                     |
+| Sizing          | The semantic sizing slots for which content is laid out.                                                                                               |
 
 TBD:
 
-- Default props - should themes allow default property configurability? Or is theming
+| Theme Element | Description                                           |
+| ------------- | ----------------------------------------------------- |
+| Default Props | Should themes allow default property configurability? |
+| Scoping       | Do schemes only reflect colors or the full theme?     |
 
-- Scoping; do schemes only reflect colors or the full theme?
 
-# Goals
+# Methods
 
-We provide a standard API to provide a theme by the application.
+| Name         | Description                                                                                |
+| ------------ | ------------------------------------------------------------------------------------------ |
+| createScheme | A utility helper to calculate a scheme given a palette and scheme name.                    |
+| createTheme  | Creates a custom theme definition.                                                         |
+| getTheme     | Accessor for previously created. Returns default theme if no theme was previously created. |
+| loadTheme    | Applies the theme while filling in missing slots.                                          |
 
-There are APIs which can help create themes based on an algorithm which can derive things.
+
+# Color Schemes
+
+The following scheme names are supported:
+
+| Scheme Name | Description                                                                                                                                                                                                                                                                               |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Default     | Should themes allow default property configurability?                                                                                                                                                                                                                                     |
+| Neutral     | A variant where the background is a soft shade of the neutral color. Most other colors remain unchanged.                                                                                                                                                                                  |
+| Soft        | A variant where the background is a soft version of the primary color. Most other colors remain unchanged.                                                                                                                                                                                |
+| Strong      | A variant where the background is a strong version of the primary color. All colors change. <li>The background becomes shades of the primary color.</li> <li>The foreground/text becomes shades of the background color.</li><li>The primary color becomes shades of the background.</li> |
+
+
 
 # Palette colors
 
 Palettes break down into named variants of a theme color, an accent color, and neutrals.
 
-| Name         | Value |
-| ------------ | ----- |
-| themePrimary |       |
+| Name                 | Description |
+| -------------------- | ----------- |
+| themePrimary         |             |
+| themeLighterAlt      |             |
+| themeLighter         |             |
+| themeLight           |             |
+| themeTertiary        |             |
+| themeSecondary       |             |
+| themeDarkAlt         |             |
+| themeDark            |             |
+| themeDarker          |             |
+| neutralLighterAlt    |             |
+| neutralLighter       |             |
+| neutralLight         |             |
+| neutralQuaternaryAlt |             |
+| neutralQuaternary    |             |
+| neutralTertiaryAlt   |             |
+| neutralTertiary      |             |
+| neutralSecondary     |             |
+| neutralPrimaryAlt    |             |
+| neutralPrimary       |             |
+| neutralDark          |             |
+| black                |             |
+| white                |             |
+| blackTranslucent40   |             |
+| neutralSecondaryAlt  |             |
+| accent               |             |
+| whiteTranslucent40   |             |
+| yellow               |             |
+| yellowLight          |             |
+| orange               |             |
+| orangeLight          |             |
+| orangeLighter        |             |
+| redDark              |             |
+| red                  |             |
+| magentaDark          |             |
+| magenta              |             |
+| magentaLight         |             |
+| purpleDark           |             |
+| purple               |             |
+| purpleLight          |             |
+| blueDark             |             |
+| blueMid              |             |
+| blue                 |             |
+| blueLight            |             |
+| tealDark             |             |
+| teal                 |             |
+| tealLight            |             |
+| greenDark            |             |
+| green                |             |
+| greenLight           |             |
 
 # Semantic colors
 
-{
-palette: { ... },
-semanticColors: { ... },
-schemes: {
-default: { ...theme },
-theme: { ...theme },
-}
-}
+| Name                             | Description |
+| -------------------------------- | ----------- |
+| bodyBackground                   |             |
+| bodyStandoutBackground           |             |
+| bodyFrameBackground              |             |
+| bodyFrameDivider                 |             |
+| bodyText                         |             |
+| bodyTextChecked                  |             |
+| bodySubtext                      |             |
+| bodyDivider                      |             |
+| actionLink                       |             |
+| actionLinkHovered                |             |
+| link                             |             |
+| linkHovered                      |             |
+| disabledBackground               |             |
+| disabledText                     |             |
+| disabledBodyText                 |             |
+| disabledSubtext                  |             |
+| focusBorder                      |             |
+| variantBorder                    |             |
+| variantBorderHovered             |             |
+| defaultStateBackground           |             |
+| errorText                        |             |
+| warningText                      |             |
+| errorBackground                  |             |
+| blockingBackground               |             |
+| warningBackground                |             |
+| warningHighlight                 |             |
+| successBackground                |             |
+| inputBorder                      |             |
+| smallInputBorder                 |             |
+| inputBorderHovered               |             |
+| inputBackground                  |             |
+| inputBackgroundChecked           |             |
+| inputBackgroundCheckedHovered    |             |
+| inputForegroundChecked           |             |
+| inputFocusBorderAlt              |             |
+| inputPlaceholderText             |             |
+| buttonBackground                 |             |
+| buttonBackgroundHovered          |             |
+| buttonBackgroundChecked          |             |
+| buttonBackgroundCheckedHovered   |             |
+| buttonBackgroundPressed          |             |
+| buttonBorder                     |             |
+| buttonText                       |             |
+| buttonTextHovered                |             |
+| buttonTextChecked                |             |
+| buttonTextCheckedHovered         |             |
+| buttonTextPressed                |             |
+| buttonBorderDisabled             |             |
+| buttonTextDisabled               |             |
+| primaryButtonBackground          |             |
+| primaryButtonBackgroundHovered   |             |
+| primaryButtonBackgroundPressed   |             |
+| primaryButtonBorder              |             |
+| primaryButtonText                |             |
+| primaryButtonTextHovered         |             |
+| primaryButtonTextPressed         |             |
+| menuItemBackgroundHovered        |             |
+| menuIcon                         |             |
+| menuHeader                       |             |
+| listBackground                   |             |
+| listText                         |             |
+| listItemBackgroundHovered        |             |
+| listItemBackgroundChecked        |             |
+| listItemBackgroundCheckedHovered |             |
+| listHeaderBackgroundHovered      |             |
+| listHeaderBackgroundPressed      |             |
 
-# Color schemes
 
 # Typography
 
-## Font families
+## Font Families
 
-## Font sizes
+## Font Sizes
 
-## Font weights
+| Name       | Description |
+| ---------- | ----------- |
+| mini       |             |
+| xSmall     |             |
+| small      |             |
+| smallPlus  |             |
+| medium     |             |
+| mediumPlus |             |
+| large      |             |
+| xLarge     |             |
+| xxLarge    |             |
+| mega       |             |
 
-## Font variants
+## Font Weights
+
+| Name     | Description |
+| -------- | ----------- |
+| default  |             |
+| light    |             |
+| regular  |             |
+| semibold |             |
+| bold     |             |
+
+
+## Font Variants
+
+| Name    | Description |
+| ------- | ----------- |
+| default |             |
+| caption |             |
+| h1      |             |
+| h2      |             |
+| h3      |             |
+| h4      |             |
+| h5      |             |
 
 # Sizing
 
 Grid size
-
-# API surface for applications to provide themes
