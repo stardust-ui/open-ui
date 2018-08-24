@@ -1,25 +1,40 @@
 # Theming
 
-The expectation for theming is that we provide a few things:
+One mistake we often see made when defining components for the web is that they make assumptions about the look and feel. Components bake in css styling, which works fine at the time of development, but creates a high barrier of entry in sharing and consuming the components within applications which may have different opinions about the visual design.
 
-1. A standard contract for an application to provide a theme
-2. A standard interface of what a theme is defined as
-3. A way for libraries to consume the theme to style their components
-4. This all needs to be done in a ui framework agnostic manner
+As we build components which adhere to the Stardust specifications, we want a consistent approach (and API surface) for applications to define their theme, and for components to consume the theme.
 
-# What is a theme?
+# What a theme is not
+
+Theming can not be:
+
+**UI framework specific.** It should work in applications which share React, Angular, and custom framework code.
+
+**CSS framework specific.** It should work in applications which use CSS through static build systems (sass, less) as well as
+
+# What is contained within a theme:
 
 A theme consists of:
 
-- Palette colors - a set of named slots for colors which represent primary/accent colors and neutrals used across the application.
+### Site variables
 
-- Named color schemes - each named scheme includes a set of named semantic slots (bg/fg/border/states) which reference palette colors.
+Site variables define the overall application colors, typeography, spacing, shading, and iconography.
 
-- Typography - how text is rendered in the site.
+**Palette colors** - a set of named slots for colors which represent primary/accent colors and neutrals used across the application. These colors should NOT be accessed by components, but exist primarily to define semantic colors.
 
-- Sizing - the semantic sizing slots which content is laid out.
+**Semantic colors** - a set of named slots which give semantic meaning to the usage of the color. Semantic colors differentiate between background vs foreground colors, and should follow a naming convention.
 
-TBD:
+_TODO: naming convention here._
+
+**Typography** - how text is rendered in the site. This defines common families, sizes, and weights. There should also be common named `variant` definitions which give a semantic name to a combo of these typography concerns.
+
+**Spacing** - semanticly named spacing values used to scale the "breathability" of the ui.
+
+_TODO: should this be provided here? As a minimum, are we on a 5 pixel grid or 4?_
+
+### Component variables
+
+_TODO: is there a way to scale this and make it typesafe?_
 
 - Default props - should themes allow default property configurability? Or is theming
 
