@@ -12,10 +12,10 @@
 We identify these issues in the UI community:
 
 - **Effort** - Engineers waste countless hours of human effort duplicating work that could be shared.
-- **Support** - Accessible users are often left with subpar experiences, or entirely unsupported.
+- **Support** - Accessible users are often left with subpar experiences, or are entirely unsupported.
 - **Consistency** - User experience is often inconsistent and compromised between UIs due to isolated development practices.
 - **Portability** - The lack of a shared language for UI limits our ability as a community to communicate, collaborate, and share.
-- **Timing** - UIs have existed long enough to observe and codify a shared standard, the time is right.
+- **Timing** - UIs have existed long enough to observe and codify a shared standard; the time is right.
 
 Stardust UI recognizes a large opportunity for the open source community to make a meaningful difference around these issues.
 
@@ -23,11 +23,11 @@ Stardust UI recognizes a large opportunity for the open source community to make
 
 ### Deliverables
 
-We intend to produce two sets of deliverables, specifications and utilities.  Both of which will be applicable to a wide range of applications.  They will also be created to withstand the rapid evolution of technology.
+We intend to produce two sets of deliverables: specifications and utilities. These deliverables will be applicable to a wide range of applications, and will be designed to withstand the rapid evolution of technology.
 
-**:scroll: Specifications** will be void of technology choices and implementation details.
+**:scroll: Specifications** will be devoid of technological choices and implementation details.
 
-**:wrench: Utilities** will be framework agnostic and applicable to all frameworks.
+**:wrench: Utilities** will be framework-agnostic.
 
 ### Focus Areas
 
