@@ -1,11 +1,10 @@
->**Tip:** This repo is in development.  Ideas and patterns you'll see here are in-progress.  You are encouraged to join in and help shape the foundation of Stardust UI.
+> **Tip:** This repo is in development. Ideas and patterns you'll see here are in-progress. You are encouraged to join in and help shape the foundation of Stardust UI.
 
 # Stardust UI
 
 **:rocket: Mission:** Maintain an open standard for UI and promote its adherence and adoption.
 
 **:busts_in_silhouette: Audience:** The broader UI community including designers, engineers, and managers.
-
 
 ## Why?
 
@@ -41,7 +40,7 @@ Stardust UI is currently focused on providing [deliverables](#deliverables) for 
 
 ## Supporters
 
-We're gathering support from teams and companies who believe in open source and who have a vision for the future of UI's.  You can support Stardust UI by implementing the standards and utilities or by contributing.
+We're gathering support from teams and companies who believe in open source and who have a vision for the future of UI's. You can support Stardust UI by implementing the standards and utilities or by contributing.
 
 ### [:point_right: <kbd>JOIN NOW</kbd>][1]
 
@@ -49,5 +48,22 @@ We're gathering support from teams and companies who believe in open source and 
 - [Office Fabric UI React](https://github.com/OfficeDev/office-ui-fabric-react)
 - [Fast DNA](https://github.com/Microsoft/fast-dna)
 
+## Getting started
+
+Make sure you have [Node.js][2] version v8 or later installed.
+
+### Useful Commands
+
+> This list contains the most useful commands. You should run `yarn run` to see all scripts.
+
+```sh
+yarn start                 // run doc site
+
+yarn build                 // build docs
+yarn deploy                // deploy gh-pages doc site
+```
+
 <!-- A Pre-filled issue template to join -->
+
 [1]: https://github.com/stardust-ui/specifications/issues/new?title=Request%20to%20join&body=%3CWelcome!%20We%27d%20love%20to%20hear%20about%20you,%20your%20team,%20and%20your%20goals...%3E
+[2]: https://nodejs.org/
