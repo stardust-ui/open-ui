@@ -25,14 +25,14 @@ const generate = componentName => {
   const ajv = new Ajv();
 
   const definitionsSchema = require("../specifications/Defs/Defs.spec");
-  const componentSchema = require(`../specifications/${componentName}/${componentName}.spec.json`);
+  const componentSchema = require(`../specifications/${componentName}/${componentName}.spec`);
 
   ajv.addSchema(definitionsSchema);
   ajv.compile(componentSchema);
 
   // TODO: To avoid these stuff we need to resolve all definitions before generation process
-  const { definitions } = ajv.getSchema("Defs.spec.json").schema;
-  const { schema } = ajv.getSchema(`${componentName}.spec.json`);
+  const { definitions } = ajv.getSchema("Defs.spec").schema;
+  const { schema } = ajv.getSchema(`${componentName}.spec`);
 
   const ast = t.program([
     t.exportNamedDeclaration(

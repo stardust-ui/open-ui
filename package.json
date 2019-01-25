@@ -40,5 +40,10 @@
       "prettier --parser mdx --write",
       "git add"
     ]
+  },
+  "jest": {
+    "testMatch": [
+      "**/?(*.)+(test).js?(x)"
+    ]
   }
 }
