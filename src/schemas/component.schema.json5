@@ -50,5 +50,5 @@
     },
   },
 
-  required: ['name', 'category', 'definition', 'url', 'anatomy', 'concepts'],
+  required: ['name', 'category', 'definition', 'url'],
 }

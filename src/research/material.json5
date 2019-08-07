@@ -4,5 +4,15 @@
   description: 'Material Design is a visual language that synthesizes the classic principles of good design with the innovation of technology and science.',
   url: 'https://material.io',
   by: 'Google',
-  components: [],
+  components: [
+    {
+      name: 'Dropdown Menu',
+      discipline: 'development',
+      discipline: 'design',
+      discipline: 'accessibility',
+      category: 'Menus',
+      url: 'https://material.io/design/components/menus.html#dropdown-menu',
+      definition: 'A dropdown menu is a compact way of displaying multiple choices. It appears upon interaction with an element (such as an icon or button) or when users perform a specific action.',
+    },
+  ],
 }
