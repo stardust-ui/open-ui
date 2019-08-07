@@ -129,7 +129,7 @@
       name: 'Toaster',
       category: 'Feedback indicators',
       definition: 'The toaster is used to show toasts (alerts) on top of an overlay. The toasts will close themselves when the close button is clicked, or after a timeout — the default is 5 seconds.',
-      url: https://evergreen.segment.com/components/toaster/',
+      url: 'https://evergreen.segment.com/components/toaster/',
     },
     {
       name: 'Alert',
