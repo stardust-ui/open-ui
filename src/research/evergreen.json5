@@ -57,7 +57,7 @@
       name: 'Popover',
       category: 'Selects & Dropdown menus',
       definition: 'The Popover component displays floating content in relation to a target.',
-      url: 'https://evergreen.segment.com/components/combobox',
+      url: 'https://evergreen.segment.com/components/popover',
     },
     {
       name: 'Menu',
