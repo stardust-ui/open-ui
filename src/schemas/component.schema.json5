@@ -50,5 +50,5 @@
     },
   },
 
-  required: ['name', 'category', 'definition', 'url'],
+  required: ['name', 'category', 'url'],
 }

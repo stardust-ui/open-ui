@@ -6,18 +6,6 @@
   by: 'AFX',
   components: [
     {
-      name: 'NOT_Button',
-      definition: 'To trigger an operation',
-      category: 'General',
-      url: 'https://ant.design/components/button',
-      anatomy: [
-        { name: 'icon' },
-        { name: 'root', implicit: true },
-        { name: 'content', implicit: true },
-      ],
-      concepts: []
-    },
-    {
       name: 'Button',
       definition: 'To trigger an operation',
       category: 'General',
@@ -111,18 +99,316 @@
           image: 'antd-button-block.png',
         },
       ],
-
-      //      callbacks: [
-      //        {
-      //          name: 'onClick',
-      //          arguments: [
-      //            {
-      //              name: 'event',
-      //              type: 'object',
-      //            },
-      //          ],
-      //        },
-      //      ],
+    },
+    {
+      name: 'Icon',
+      url: 'https://ant.design/components/icon',
+      category: 'General',
+    },
+    {
+      name: 'Typography',
+      url: 'https://ant.design/components/typography',
+      category: 'General',
+    },
+    {
+      name: 'Grid',
+      url: 'https://ant.design/components/grid',
+      category: 'Layout',
+    },
+    {
+      name: 'Layout',
+      url: 'https://ant.design/components/layout',
+      category: 'Layout',
+    },
+    {
+      name: 'Affix',
+      url: 'https://ant.design/components/affix',
+      category: 'Navigation',
+    },
+    {
+      name: 'Breadcrumb',
+      url: 'https://ant.design/components/breadcrumb',
+      category: 'Navigation',
+    },
+    {
+      name: 'Dropdown',
+      url: 'https://ant.design/components/dropdown',
+      category: 'Navigation',
+    },
+    {
+      name: 'Menu',
+      url: 'https://ant.design/components/menu',
+      category: 'Navigation',
+    },
+    {
+      name: 'Pagination',
+      url: 'https://ant.design/components/pagination',
+      category: 'Navigation',
+    },
+    {
+      name: 'PageHeader',
+      url: 'https://ant.design/components/page-header',
+      category: 'Navigation',
+    },
+    {
+      name: 'Steps',
+      url: 'https://ant.design/components/steps',
+      category: 'Navigation',
+    },
+    {
+      name: 'AutoComplete',
+      url: 'https://ant.design/components/auto-complete',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Checkbox',
+      url: 'https://ant.design/components/checkbox',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Cascader',
+      url: 'https://ant.design/components/cascader',
+      category: 'Data Entry',
+    },
+    {
+      name: 'DatePicker',
+      url: 'https://ant.design/components/date-picker',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Form',
+      url: 'https://ant.design/components/form',
+      category: 'Data Entry',
+    },
+    {
+      name: 'InputNumber',
+      url: 'https://ant.design/components/input-number',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Input',
+      url: 'https://ant.design/components/input',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Mentions',
+      url: 'https://ant.design/components/mentions',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Rate',
+      url: 'https://ant.design/components/rate',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Radio',
+      url: 'https://ant.design/components/radio',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Switch',
+      url: 'https://ant.design/components/switch',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Slider',
+      url: 'https://ant.design/components/slider',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Select',
+      url: 'https://ant.design/components/select',
+      category: 'Data Entry',
+    },
+    {
+      name: 'TreeSelect',
+      url: 'https://ant.design/components/tree-select',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Transfer',
+      url: 'https://ant.design/components/transfer',
+      category: 'Data Entry',
+    },
+    {
+      name: 'TimePicker',
+      url: 'https://ant.design/components/time-picker',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Upload',
+      url: 'https://ant.design/components/upload',
+      category: 'Data Entry',
+    },
+    {
+      name: 'Avatar',
+      url: 'https://ant.design/components/avatar',
+      category: 'Data Display',
+    },
+    {
+      name: 'Badge',
+      url: 'https://ant.design/components/badge',
+      category: 'Data Display',
+    },
+    {
+      name: 'Comment',
+      url: 'https://ant.design/components/comment',
+      category: 'Data Display',
+    },
+    {
+      name: 'Collapse',
+      url: 'https://ant.design/components/collapse',
+      category: 'Data Display',
+    },
+    {
+      name: 'Carousel',
+      url: 'https://ant.design/components/carousel',
+      category: 'Data Display',
+    },
+    {
+      name: 'Card',
+      url: 'https://ant.design/components/card',
+      category: 'Data Display',
+    },
+    {
+      name: 'Calendar',
+      url: 'https://ant.design/components/calendar',
+      category: 'Data Display',
+    },
+    {
+      name: 'Description List',
+      url: 'https://ant.design/components/descriptions',
+      category: 'Data Display',
+    },
+    {
+      name: 'Empty',
+      url: 'https://ant.design/components/empty',
+      category: 'Data Display',
+    },
+    {
+      name: 'List',
+      url: 'https://ant.design/components/list',
+      category: 'Data Display',
+    },
+    {
+      name: 'Popover',
+      url: 'https://ant.design/components/popover',
+      category: 'Data Display',
+    },
+    {
+      name: 'Statistic',
+      url: 'https://ant.design/components/statistic',
+      category: 'Data Display',
+    },
+    {
+      name: 'Tree',
+      url: 'https://ant.design/components/tree',
+      category: 'Data Display',
+    },
+    {
+      name: 'Tooltip',
+      url: 'https://ant.design/components/tooltip',
+      category: 'Data Display',
+    },
+    {
+      name: 'Timeline',
+      url: 'https://ant.design/components/timeline',
+      category: 'Data Display',
+    },
+    {
+      name: 'Tag',
+      url: 'https://ant.design/components/tag',
+      category: 'Data Display',
+    },
+    {
+      name: 'Tabs',
+      url: 'https://ant.design/components/tabs',
+      category: 'Data Display',
+    },
+    {
+      name: 'Table',
+      url: 'https://ant.design/components/table',
+      category: 'Data Display',
+    },
+    {
+      name: 'Alert',
+      url: 'https://ant.design/components/alert',
+      category: 'Feedback',
+    },
+    {
+      name: 'Drawer',
+      url: 'https://ant.design/components/drawer',
+      category: 'Feedback',
+    },
+    {
+      name: 'Modal',
+      url: 'https://ant.design/components/modal',
+      category: 'Feedback',
+    },
+    {
+      name: 'Message',
+      url: 'https://ant.design/components/message',
+      category: 'Feedback',
+    },
+    {
+      name: 'Notification',
+      url: 'https://ant.design/components/notification',
+      category: 'Feedback',
+    },
+    {
+      name: 'Progress',
+      url: 'https://ant.design/components/progress',
+      category: 'Feedback',
+    },
+    {
+      name: 'Popconfirm',
+      url: 'https://ant.design/components/popconfirm',
+      category: 'Feedback',
+    },
+    {
+      name: 'Result',
+      url: 'https://ant.design/components/result',
+      category: 'Feedback',
+    },
+    {
+      name: 'Spin',
+      url: 'https://ant.design/components/spin',
+      category: 'Feedback',
+    },
+    {
+      name: 'Skeleton',
+      url: 'https://ant.design/components/skeleton',
+      category: 'Feedback',
+    },
+    {
+      name: 'Anchor',
+      url: 'https://ant.design/components/anchor',
+      category: 'Other',
+    },
+    {
+      name: 'BackTop',
+      url: 'https://ant.design/components/back-top',
+      category: 'Other',
+    },
+    {
+      name: 'ConfigProvider',
+      url: 'https://ant.design/components/config-provider',
+      category: 'Other',
+    },
+    {
+      name: 'Divider',
+      url: 'https://ant.design/components/divider',
+      category: 'Other',
+    },
+    {
+      name: 'LocaleProvider (Deprecated)',
+      url: 'https://ant.design/components/locale-provider',
+      category: 'Deprecated',
+    },
+    {
+      name: 'Mention (Deprecated)',
+      url: 'https://ant.design/components/mention',
+      category: 'Deprecated',
     },
   ],
 }
