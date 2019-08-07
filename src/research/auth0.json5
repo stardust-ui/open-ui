@@ -1,0 +1,8 @@
+{
+  $schema: '../schemas/design-system.schema.json5',
+  name: 'Auth0 Styleguide',
+  description: 'Conjunction of design patterns, components and resources used across our products.',
+  url: 'https://styleguide.auth0.com',
+  by: 'Auth0',
+  components: [],
+}

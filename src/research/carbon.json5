@@ -1,0 +1,62 @@
+{
+  $schema: '../schemas/design-system.schema.json5',
+  name: 'Carbon Design System',
+  url: 'https://www.carbondesignsystem.com',
+  by: 'IBM',
+  description: 'Carbon is IBM’s open-source design system for products and experiences. With the IBM Design Language as its foundation, the system consists of working code, design tools and resources, human interface guidelines, and a vibrant community of contributors.',
+  components: [
+    {
+      name: 'Button',
+      category: 'components',
+      definition: '',
+      url: 'https://www.carbondesignsystem.com/components/button/code',
+      anatomy: [
+        { name: 'root', implicit: true },
+        { name: 'icon', implicit: true },
+        { name: 'content', implicit: true },
+      ],
+      concepts: [
+        {
+          name: 'primary',
+          image: 'carbon-button-primary.png',
+        },
+        {
+          name: 'secondary',
+          image: 'carbon-button-secondary.png',
+        },
+        {
+          name: 'tertiary',
+          image: 'carbon-button-tertiary.png',
+        },
+        {
+          name: 'ghost',
+          image: 'carbon-button-ghost.png',
+        },
+        {
+          name: 'danger',
+          image: 'carbon-button-danger.png',
+        },
+        {
+          name: 'disabled',
+          image: 'carbon-button-disabled.png',
+        },
+        {
+          name: 'icon',
+          image: 'carbon-button-icon.png',
+        },
+        {
+          name: 'icon-only',
+          image: 'carbon-button-icon-only.png',
+        },
+        {
+          name: 'small',
+          image: 'carbon-button-small.png',
+        },
+        {
+          name: 'set',
+          image: 'carbon-button-set.png',
+        },
+      ],
+    },
+  ],
+}

@@ -1,0 +1,21 @@
+{
+  $id: 'component-part.schema.json',
+  $schema: 'http://json-schema.org/draft-07/schema#',
+  type: 'object',
+  description: 'A callback function associated with an event handler.',
+  properties: {
+    name: { type: 'string' },
+    arguments: {
+      type: 'array',
+      items: {
+        type: 'object',
+        properties: {
+          name: { type: 'string' },
+          type: { type: 'string' },
+        },
+        required: ['name'],
+      },
+    },
+  },
+  required: ['name'],
+}

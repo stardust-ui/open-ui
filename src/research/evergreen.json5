@@ -1,0 +1,8 @@
+{
+  $schema: '../schemas/design-system.schema.json5',
+  name: 'Evergreen',
+  description: 'Evergreen is a React UI Framework for building ambitious products on the web.',
+  url: 'https://evergreen.segment.com',
+  by: 'Segment',
+  components: [],
+}

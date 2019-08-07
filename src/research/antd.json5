@@ -1,0 +1,116 @@
+{
+  $schema: '../schemas/design-system.schema.json5',
+  name: 'Ant Design',
+  description: 'A design system with values of Nature and Determinacy for better user experience of enterprise applications.',
+  url: 'http://ant.design',
+  by: 'AFX',
+  components: [
+    {
+      name: 'Button',
+      definition: 'To trigger an operation',
+      category: 'General',
+      url: 'https://ant.design/components/button',
+      anatomy: [
+        { name: 'icon' },
+        { name: 'root', implicit: true },
+        { name: 'content', implicit: true },
+      ],
+      concepts: [
+        {
+          name: 'primary',
+          category: 'type',
+          image: 'antd-button-primary.png',
+          $comment: 'Styled with the primary theme color.',
+        },
+        {
+          name: 'default',
+          category: 'type',
+          image: 'antd-button-default.png',
+          $comment: 'No special formatting, also eluded to as a secondary button.',
+        },
+        {
+          name: 'dashed',
+          category: 'type',
+          image: 'antd-button-dashed.png',
+          $comment: 'Has a dashed outline.',
+        },
+        {
+          name: 'danger',
+          category: 'type',
+          image: 'antd-button-danger.png',
+          $comment: 'Is red colored.',
+        },
+        {
+          name: 'link',
+          category: 'type',
+          image: 'antd-button-link.png',
+          $comment: 'Formatted like an anchor tag with button padding.',
+        },
+        {
+          name: 'icon',
+          description: 'Button components can contain an Icon',
+          image: 'antd-button-icon.png',
+        },
+        {
+          name: 'small',
+          description: 'Ant Design supports a default button size as well as a large and small size.',
+          image: 'antd-button-size.png',
+        },
+        {
+          name: 'large',
+          description: 'Ant Design supports a default button size as well as a large and small size.',
+          image: 'antd-button-size.png',
+        },
+        {
+          name: 'circle',
+          description: 'Can be set to circle, round or omitted.',
+          category: 'shape',
+          image: 'antd-button-circle.png',
+        },
+        {
+          name: 'round',
+          description: 'Can be set to circle, round or omitted.',
+          category: 'shape',
+          image: 'antd-button-round.png',
+        },
+        {
+          name: 'disabled',
+          description: '',
+          image: 'antd-button-disabled.png',
+        },
+        {
+          name: 'loading',
+          description: 'Set the loading status of button.',
+          image: 'antd-button-loading.png',
+        },
+        {
+          name: 'group',
+          description: 'Buttons can be grouped by placing multiple Button components into a Button.Group. The size can be set to large, small or left unset resulting in a default size.',
+          image: 'antd-button-group.png',
+        },
+        {
+          name: 'ghost',
+          description: 'Make background transparent and invert text and border colors. It is common used in colored background.',
+          image: 'antd-button-ghost.png',
+        },
+        {
+          name: 'block',
+          description: 'block property will make the button fit to its parent width.',
+          image: 'antd-button-block.png',
+        },
+      ],
+
+      //      callbacks: [
+      //        {
+      //          name: 'onClick',
+      //          arguments: [
+      //            {
+      //              name: 'event',
+      //              type: 'object',
+      //            },
+      //          ],
+      //        },
+      //      ],
+    },
+  ],
+}

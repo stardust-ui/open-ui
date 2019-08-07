@@ -1,0 +1,8 @@
+{
+  $schema: '../schemas/design-system.schema.json5',
+  name: 'Lightning Design System',
+  description: 'The Salesforce Lightning Design System',
+  url: 'https://www.lightningdesignsystem.com',
+  by: 'Salesforce',
+  components: [],
+}

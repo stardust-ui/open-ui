@@ -1,0 +1,11 @@
+{
+  $id: 'component-concept.schema.json',
+  $schema: 'http://json-schema.org/draft-07/schema#',
+  description: '',
+  type: 'object',
+  properties: {
+    name: { type: 'string' },
+    description: { type: 'string' },
+  },
+  required: ['name'],
+}

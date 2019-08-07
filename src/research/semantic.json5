@@ -1,0 +1,85 @@
+{
+  $schema: '../schemas/design-system.schema.json5',
+  name: 'Semantic UI',
+  description: 'Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.',
+  url: 'https://semantic-ui.com',
+  by: 'Semantic Org',
+  components: [
+    {
+      name: 'Button',
+      definition: 'A button indicates a possible user action.',
+      category: 'elements',
+      url: 'https://semantic-ui.com/elements/button',
+      concepts: [
+        {
+          name: 'standard',
+          description: 'A standard button.',
+          image: 'sui-button-standard.png',
+        },
+        {
+          name: 'primary',
+          description: 'A button can be formatted to show different levels of emphasis',
+          image: 'sui-button-primary.png',
+        },
+        {
+          name: 'secondary',
+          description: 'A button can be formatted to show different levels of emphasis',
+          image: 'sui-button-secondary.png',
+        },
+        {
+          name: 'labeled',
+          description: 'A button can appear alongside a label.',
+          image: 'sui-button-labeled.png',
+        },
+        {
+          name: 'icon',
+          description: 'A button can have only an icon.',
+          image: 'sui-button-labeled.png',
+        },
+        {
+          name: 'labeled icon',
+          description: 'A button can use an icon as a label',
+          image: 'sui-button-labeled-icon.png',
+        },
+        {
+          name: 'basic',
+          description: 'A basic button is less pronounced',
+          image: 'sui-button-labeled-icon.png',
+        },
+        {
+          name: 'inverted',
+          description: 'A button can be formatted to appear on dark backgrounds',
+          image: 'sui-button-inverted.png',
+        },
+        {
+          name: 'buttons',
+          description: 'Buttons can exist together as a group',
+          image: 'sui-button-buttons.png',
+        },
+        {
+          name: 'icon buttons',
+          description: 'Buttons can exist together as a group',
+          image: 'sui-button-buttons.png',
+        },
+        {
+          name: 'or',
+          description: 'Button groups can contain conditionals.',
+          image: 'sui-button-buttons.png',
+        },
+        {
+          name: 'active',
+          description: 'A button can show it is currently the active user selection',
+          image: 'sui-button-active.png',
+        },
+        {
+          name: 'disabled',
+          description: 'A button can show it is currently unable to be interacted with',
+        },
+        {
+          name: 'loading',
+          description: 'A button can show a loading indicator',
+        },
+      ],
+    },
+  ],
+}
