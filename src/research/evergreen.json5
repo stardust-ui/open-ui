@@ -51,13 +51,13 @@
       name: 'Combobox',
       category: 'Selects & Dropdown menus',
       definition: 'The Combobox component is used for selecting an option from a predefined list of options. It is similar to a Select or SelectMenu component. Clicking the button will show all items. Typing in the text input will filter the list.',
-      url: 'https://evergreen.segment.com/components/combobox/',
+      url: 'https://evergreen.segment.com/components/combobox',
     },
     {
       name: 'Popover',
       category: 'Selects & Dropdown menus',
       definition: 'The Popover component displays floating content in relation to a target.',
-      url: 'https://evergreen.segment.com/components/combobox/',
+      url: 'https://evergreen.segment.com/components/combobox',
     },
     {
       name: 'Menu',

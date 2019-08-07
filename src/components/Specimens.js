@@ -11,10 +11,18 @@ const Specimens = ({ component, concept }) => {
   const matchedConcept = _.filter(concepts, { name: concept })
   const images = _.map(matchedConcept, 'image')
 
-  return images.map(src => {
-    console.log('specimen', { component, concept, src })
-    return <Image key={src} src={src} />
-  })
+  return (
+    <div style={{ border: '1px solid #ccc' }}>
+      <div style={{ textAlign: 'center', textTransform: 'uppercase', fontSize: '12px' }}>
+        <strong>Specimens</strong>
+      </div>
+      <div style={{ padding: '1rem' }}>
+        {images.map(src => (
+          <Image key={src} src={src} />
+        ))}
+      </div>
+    </div>
+  )
 }
 
 export default Specimens
