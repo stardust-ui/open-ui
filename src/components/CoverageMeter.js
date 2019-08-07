@@ -12,7 +12,7 @@ const CoverageMeter = ({ component, concept }) => {
         const passComponentCheck = !component || !!foundComponent
         const passConceptCheck = !concept || !!foundConcept
 
-        console.log(designSystem.name, { component, concept, foundComponent, foundConcept })
+        // console.log(designSystem.name, { component, concept, foundComponent, foundConcept })
 
         return (
           <div

@@ -6,6 +6,18 @@
   by: 'AFX',
   components: [
     {
+      name: 'NOT_Button',
+      definition: 'To trigger an operation',
+      category: 'General',
+      url: 'https://ant.design/components/button',
+      anatomy: [
+        { name: 'icon' },
+        { name: 'root', implicit: true },
+        { name: 'content', implicit: true },
+      ],
+      concepts: []
+    },
+    {
       name: 'Button',
       definition: 'To trigger an operation',
       category: 'General',
