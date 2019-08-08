@@ -1,5 +1,6 @@
 import React from 'react'
 import * as research from '../research'
+import _ from 'lodash'
 
 const ComponentNameMatrix = props => {
   const getMatchName = name =>
@@ -33,8 +34,6 @@ const ComponentNameMatrix = props => {
     width: '100%',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    // textAlign: 'left',
-    // transform: 'translateY(-1.2rem) rotate(-45deg)',
     whiteSpace: 'nowrap',
     background: 'white',
     borderBottom: '1px solid rgba(0, 0, 0, 0.5)',
@@ -56,7 +55,6 @@ const ComponentNameMatrix = props => {
     <div
       style={{
         display: 'flex',
-        marginTop: '5rem',
         textAlign: 'center',
         fontSize: '12px',
       }}
@@ -84,7 +82,7 @@ const ComponentNameMatrix = props => {
       {_.map(research, curentResearch => (
         <div key={curentResearch.name} style={colStyle}>
           <strong style={headerStyle}>
-            <a target="_blank" rel="nofollow noreferrer" href={curentResearch.url}>
+            <a target="_blank" rel="noopener noreferrer" href={curentResearch.url}>
               {curentResearch.name}
             </a>
           </strong>
@@ -102,7 +100,7 @@ const ComponentNameMatrix = props => {
             }
 
             return foundComponent ? (
-              <a target="_blank" rel="nofollow noreferrer" href={foundComponent.url} style={style}>
+              <a target="_blank" rel="noopener noreferrer" href={foundComponent.url} style={style}>
                 {foundComponent.name}
               </a>
             ) : (
