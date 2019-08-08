@@ -6,7 +6,8 @@
   by: 'W3',
   components: [
     {
-      name: 'Accordion (Sections With Show/Hide Functionality)',
+      name: 'Accordion',
+      definition: 'Sections With Show/Hide Functionality',
       url: 'https://www.w3.org/TR/wai-aria-practices/#accordion',
       category: 'Design Patterns and Widgets',
     },
@@ -36,7 +37,8 @@
     },
 
     {
-      name: 'Carousel (Slide Show or Image Rotator)',
+      name: 'Carousel',
+      definition: 'Slide Show or Image Rotator',
       url: 'https://www.w3.org/TR/wai-aria-practices/#carousel',
       category: 'Design Patterns and Widgets',
     },
@@ -60,7 +62,8 @@
     },
 
     {
-      name: 'Disclosure (Show/Hide)',
+      name: 'Disclosure',
+      definition: 'Show/Hide',
       url: 'https://www.w3.org/TR/wai-aria-practices/#disclosure',
       category: 'Design Patterns and Widgets',
     },
@@ -93,7 +96,7 @@
     {
       name: 'Menu or Menu bar',
       url: 'https://www.w3.org/TR/wai-aria-practices/#menu',
-      category: 'Design Patterns and Widgets'
+      category: 'Design Patterns and Widgets',
     },
 
     {

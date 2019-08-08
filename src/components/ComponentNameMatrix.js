@@ -6,7 +6,7 @@ const ComponentNameMatrix = props => {
     name
       .replace(/ /gi, '')
       .toLowerCase()
-      .replace(/(e|s|es)$/, '')
+      .replace(/(\w+)(e|s|es)$/, '$1')
 
   const matchNameMap = new Map([])
 
@@ -24,30 +24,48 @@ const ComponentNameMatrix = props => {
     ([matchName, count]) => matchName,
   )
 
-  const rowStyle = {
-    borderBottom: '1px solid rgba(0, 0, 0, 0.3)',
-    height: '2rem',
-    lineHeight: 1.2,
+  const colStyle = { flex: 1, width: '2rem' }
+  const headerStyle = {
+    position: 'sticky',
+    display: 'block',
+    padding: '1rem 0 0.5rem 0',
+    top: 0,
+    width: '100%',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    // textAlign: 'left',
+    // transform: 'translateY(-1.2rem) rotate(-45deg)',
+    whiteSpace: 'nowrap',
+    background: 'white',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.5)',
+  }
+  const cellStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
+    overflow: 'hidden',
+    height: '2rem',
+    lineHeight: 1.2,
+    // borderLeft: '1px solid rgba(0, 0, 0, 0.1)',
+    borderRight: '1px solid rgba(0, 0, 0, 0.1)',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
   }
-  const colStyle = { flex: 1, width: '2rem' }
 
   return (
     <div
       style={{
-        fontSize: '12px',
         display: 'flex',
+        marginTop: '5rem',
         textAlign: 'center',
+        fontSize: '12px',
       }}
     >
       <div style={colStyle}>
-        <h5>Match</h5>
+        <strong style={headerStyle}>Match</strong>
         {_.map(matchNameToCount, ([matchName, count]) => {
           return (
-            <div key={matchName} style={rowStyle}>
+            <div key={matchName} style={cellStyle}>
               {Math.round((count / Object.keys(research).length) * 100)}%
               <div
                 style={{
@@ -65,39 +83,30 @@ const ComponentNameMatrix = props => {
 
       {_.map(research, curentResearch => (
         <div key={curentResearch.name} style={colStyle}>
-          <h5
-            style={{
-              position: 'sticky',
-              display: 'block',
-              top: 0,
-              width: '100%',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis',
-              whiteSpace: 'nowrap',
-              background: 'white',
-            }}
-          >
+          <strong style={headerStyle}>
             <a target="_blank" rel="nofollow noreferrer" href={curentResearch.url}>
               {curentResearch.name}
             </a>
-          </h5>
+          </strong>
           {_.map(matchNameToCount, ([matchName, count]) => {
             const foundComponent = _.find(
               curentResearch.components,
               ({ name }) => getMatchName(name) === matchName,
             )
 
-            return (
-              <div
-                key={matchName}
-                style={{ ...rowStyle, background: foundComponent ? 'lightgreen' : 'salmon' }}
-              >
-                {foundComponent && (
-                  <a target="_blank" rel="nofollow noreferrer" href={foundComponent.url}>
-                    {foundComponent.name}
-                  </a>
-                )}
-              </div>
+            const style = {
+              ...cellStyle,
+              background: foundComponent ? 'rgba(0, 255, 0, 0.1)' : 'rgba(255, 0, 0, 0.1)',
+              color: foundComponent ? 'rgb(0, 64, 0)' : 'rgb(64, 0, 0)',
+              textDecoration: 'none',
+            }
+
+            return foundComponent ? (
+              <a target="_blank" rel="nofollow noreferrer" href={foundComponent.url} style={style}>
+                {foundComponent.name}
+              </a>
+            ) : (
+              <div key={matchName} style={style} />
             )
           })}
         </div>

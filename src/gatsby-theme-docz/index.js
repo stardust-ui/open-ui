@@ -1,5 +1,5 @@
 import React from 'react'
-import { theme, useConfig, ComponentsProvider } from 'docz'
+import { css, theme, useConfig, ComponentsProvider } from 'docz'
 import { ThemeProvider } from 'emotion-theming'
 
 import * as components from '../components'
@@ -36,6 +36,17 @@ const themeConfig = {
     primary: 'tomato',
     secondary: 'khaki',
     gray: 'lightslategray',
+  },
+  styles: {
+    body: {
+      background: 'red',
+    },
+    h1: {
+      fontSize: '100px',
+    },
+    h2: {
+      fontSize: '100px',
+    },
   },
 }
 
