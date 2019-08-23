@@ -1,5 +1,6 @@
 {
   $schema: '../schemas/design-system.schema.json5',
+  lastUpdated: '2019-08-22',
   name: 'FastDNA',
   description: 'An unopinionated system to build adaptive interfaces.',
   url: 'https://www.fast.design',

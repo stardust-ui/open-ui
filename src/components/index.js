@@ -1,5 +1,5 @@
 export { default as Anatomy } from './Anatomy'
-export { default as CoverageMeter } from './CoverageMeter'
+export { default as ConceptCoverage } from './ConceptCoverage'
 export { default as Image } from './Image'
 export { default as Specimens } from './Specimens'
 export { default as ComponentNameMatrix } from './ComponentNameMatrix'

@@ -1,24 +1,13 @@
 import React from 'react'
+import { anatomiesByComponent } from '../research'
 
 const Anatomy = props => {
   return (
-    <div
-      style={{
-        display: 'inline-grid',
-        padding: '8px',
-        gridGap: '8px',
-        gridTemplate: `
-          "icon content" 32px /
-           32px 128px
-         `,
-        color: '#fff',
-        fontWeight: 'bold',
-        letterSpacing: '-1px',
-        background: 'magenta',
-      }}
-    >
-      {props.children}
-    </div>
+    <ul>
+      {anatomiesByComponent[props.component].map(({ name }) => (
+        <li key={name}>{name}</li>
+      ))}
+    </ul>
   )
 }
 

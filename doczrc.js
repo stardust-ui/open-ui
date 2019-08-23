@@ -1,4 +1,5 @@
 export default {
+  title: 'Open UI',
   themeConfig: {
     mode: 'light',
     colors: {

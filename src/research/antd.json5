@@ -1,5 +1,6 @@
 {
   $schema: '../schemas/design-system.schema.json5',
+  lastUpdated: '2019-08-22',
   name: 'Ant Design',
   description: 'A design system with values of Nature and Determinacy for better user experience of enterprise applications.',
   url: 'http://ant.design',
@@ -118,6 +119,138 @@
       name: 'Typography',
       url: 'https://ant.design/components/typography',
       category: 'General',
+      discipline: 'development',
+    },
+    {
+      name: 'Text',
+      category: 'Typography',
+      url: 'https://ant.design/components/typography/#Typography.Text',
+      discipline: 'development',
+      concepts: [
+        {
+          name: 'code',
+          description: 'code style',
+          // TODO: image: '',
+        },
+        {
+          name: 'copyable',
+          description: 'Config copy. Can set copy text and callback when is an object',
+          // TODO: image: '',
+        },
+        {
+          name: 'delete',
+          description: 'delete line style',
+          // TODO: image: '',
+        },
+        {
+          name: 'disabled',
+          description: 'Disable content',
+          // TODO: image: '',
+        },
+        {
+          name: 'editable',
+          description: 'Editable. Can control edit state when is object',
+          // TODO: image: '',
+        },
+        {
+          name: 'ellipsis',
+          description: 'Display ellipsis when overflow',
+          // TODO: image: '',
+        },
+        {
+          name: 'mark',
+          description: 'mark style',
+          // TODO: image: '',
+        },
+        {
+          name: 'underline',
+          description: 'underline style',
+          // TODO: image: '',
+        },
+        {
+          name: 'onChange',
+          description: 'Trigger when user edit the content',
+          // TODO: image: '',
+        },
+        {
+          name: 'strong',
+          description: 'bold style',
+          // TODO: image: '',
+        },
+        {
+          name: 'type',
+          description: 'Content type',
+          // TODO: image: '',
+        },
+      ],
+    },
+    {
+      name: 'Title',
+      category: 'Typography',
+      url: 'https://ant.design/components/typography/#Typography.Title',
+      discipline: 'development',
+      concepts: [
+        {
+          name: 'code',
+          description: 'code style',
+          // TODO: image: '',
+        },
+        {
+          name: 'copyable',
+          description: 'Config copy. Can set copy text and callback when is an object',
+          // TODO: image: '',
+        },
+        {
+          name: 'delete',
+          description: 'delete line style',
+          // TODO: image: '',
+        },
+        {
+          name: 'disabled',
+          description: 'Disable content',
+          // TODO: image: '',
+        },
+        {
+          name: 'editable',
+          description: 'Editable. Can control edit state when is object',
+          // TODO: image: '',
+        },
+        {
+          name: 'ellipsis',
+          description: 'Display ellipsis when overflow. Can config rows and expandable by using object',
+          // TODO: image: '',
+        },
+        {
+          name: 'level',
+          description: 'Set content importance. Match with h1, h2, h3, h4',
+          // TODO: image: '',
+        },
+        {
+          name: 'mark',
+          description: 'mark style',
+          // TODO: image: '',
+        },
+        {
+          name: 'underline',
+          description: 'underline style',
+          // TODO: image: '',
+        },
+        {
+          name: 'onChange',
+          description: 'Trigger when user edit the content',
+          // TODO: image: '',
+        },
+        {
+          name: 'type',
+          description: 'Content type',
+          // TODO: image: '',
+        },
+      ],
+    },
+    {
+      name: 'Paragraph',
+      category: 'Typography',
+      url: 'https://ant.design/components/typography/#Typography.Paragraph',
       discipline: 'development',
     },
     {

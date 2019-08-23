@@ -1,15 +1,9 @@
 import React from 'react'
-import _ from 'lodash'
-import * as research from '../research'
+import { getImagesForComponentConcept } from '../research'
 import Image from './Image'
 
 const Specimens = ({ component, concept }) => {
-  const allComponents = _.flatMap(research, 'components')
-
-  const components = _.filter(allComponents, { name: component })
-  const concepts = _.flatMap(components, 'concepts')
-  const matchedConcept = _.filter(concepts, { name: concept })
-  const images = _.map(matchedConcept, 'image')
+  const images = getImagesForComponentConcept(component, concept)
 
   return (
     <div style={{ border: '1px solid #ccc' }}>
