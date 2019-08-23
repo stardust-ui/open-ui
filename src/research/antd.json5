@@ -130,27 +130,27 @@
         {
           name: 'code',
           description: 'code style',
-          // TODO: image: '',
+          image: 'antd-text-code.png',
         },
         {
           name: 'copyable',
           description: 'Config copy. Can set copy text and callback when is an object',
-          // TODO: image: '',
+          image: 'antd-text-copyable.png',
         },
         {
           name: 'delete',
           description: 'delete line style',
-          // TODO: image: '',
+          image: 'antd-text-delete.png',
         },
         {
           name: 'disabled',
           description: 'Disable content',
-          // TODO: image: '',
+          image: 'antd-text-disabled.png',
         },
         {
           name: 'editable',
           description: 'Editable. Can control edit state when is object',
-          // TODO: image: '',
+          image: 'antd-text-editable.png',
         },
         {
           name: 'ellipsis',
@@ -160,12 +160,12 @@
         {
           name: 'mark',
           description: 'mark style',
-          // TODO: image: '',
+          image: 'antd-text-editable.png',
         },
         {
           name: 'underline',
           description: 'underline style',
-          // TODO: image: '',
+          image: 'antd-text-editable.png',
         },
         {
           name: 'onChange',
@@ -175,25 +175,25 @@
         {
           name: 'strong',
           description: 'bold style',
-          // TODO: image: '',
+          image: 'antd-text-strong.png',
         },
         {
           name: 'secondary',
           group: 'type',
           description: 'Content type',
-          // TODO: image: '',
+          image: 'antd-text-type-secondary.png',
         },
         {
           name: 'warning',
           group: 'type',
           description: 'Content type',
-          // TODO: image: '',
+          image: 'antd-text-type-warning.png',
         },
         {
           name: 'danger',
           group: 'type',
           description: 'Content type',
-          // TODO: image: '',
+          image: 'antd-text-type-danger.png',
         },
       ],
     },
