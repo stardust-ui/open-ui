@@ -178,7 +178,20 @@
           // TODO: image: '',
         },
         {
-          name: 'type',
+          name: 'secondary',
+          group: 'type',
+          description: 'Content type',
+          // TODO: image: '',
+        },
+        {
+          name: 'warning',
+          group: 'type',
+          description: 'Content type',
+          // TODO: image: '',
+        },
+        {
+          name: 'danger',
+          group: 'type',
           description: 'Content type',
           // TODO: image: '',
         },
@@ -241,7 +254,20 @@
           // TODO: image: '',
         },
         {
-          name: 'type',
+          name: 'secondary',
+          group: 'type',
+          description: 'Content type',
+          // TODO: image: '',
+        },
+        {
+          name: 'warning',
+          group: 'type',
+          description: 'Content type',
+          // TODO: image: '',
+        },
+        {
+          name: 'danger',
+          group: 'type',
           description: 'Content type',
           // TODO: image: '',
         },
@@ -252,6 +278,52 @@
       category: 'Typography',
       url: 'https://ant.design/components/typography/#Typography.Paragraph',
       discipline: 'development',
+      concepts: [
+        {
+          name: 'code',
+          description: 'code style',
+        },
+        {
+          name: 'copyable',
+          description: 'Config copy. Can set copy text and callback when is an object',
+        },
+        {
+          name: 'delete',
+          description: 'delete line style',
+        },
+        {
+          name: 'disabled',
+          description: 'Disable content',
+        },
+        {
+          name: 'editable',
+          description: 'Editable. Can control edit state when is object',
+        },
+        {
+          name: 'ellipsis',
+          description: 'Display ellipsis when overflow. Can config rows and expandable by using object',
+        },
+        {
+          name: 'mark',
+          description: 'mark style',
+        },
+        {
+          name: 'underline',
+          description: 'underline style',
+        },
+        {
+          name: 'onChange',
+          description: 'Trigger when user edit the content',
+        },
+        {
+          name: 'strong',
+          description: 'bold style',
+        },
+        {
+          name: 'type',
+          description: 'Content type',
+        },
+      ],
     },
     {
       name: 'Grid',
