@@ -24,7 +24,7 @@ Stardust UI recognizes a large opportunity for the open source community to make
 
 We intend to produce two sets of deliverables: specifications and utilities. These deliverables will be applicable to a wide range of applications, and will be designed to withstand the rapid evolution of technology.
 
-**:scroll: Specifications** will be pure descriptions of intent, and will be devoid of concrete technological choices and implementation details.
+**:scroll: UI Specifications** will be pure descriptions of intent, and will be devoid of concrete technological choices and implementation details.
 
 **:wrench: Utilities** will be framework-agnostic.
 
