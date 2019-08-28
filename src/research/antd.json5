@@ -354,6 +354,93 @@
       url: 'https://ant.design/components/dropdown',
       category: 'Navigation',
       discipline: 'development',
+      description: 'A dropdown list. When To Use: If there are too many operations to display, you can wrap them in a Dropdown. By clicking/hovering on the trigger, a dropdown menu should appear, which allows you to choose one option and execute relevant actions.',
+      concepts: [
+        {
+          name: 'disabled',
+          description: 'whether the dropdown menu is disabled'
+        },
+        {
+          name: 'getPopupContainer',
+          description: 'to set the container of the dropdown menu. The default is to create a div element in body, you can reset it to the scrolling area and make a relative reposition. example	Function(triggerNode)	() => document.body',
+        },
+        {
+        	name: 'overlay',
+        	description: 'the dropdown menu',
+        },
+        {
+        	name: 'overlayClassName',
+        	description: 'Class name of the dropdown root element',
+        },
+        {
+        	name: 'overlayStyle',
+        	description: 'Style of the dropdown root element',
+        },
+        {
+        	name: 'placement',
+        	description: 'placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight	String	bottomLeft',
+        },
+        {
+        	name: 'trigger',
+        	description: 'the trigger mode which executes the drop-down action, hover doesn\'t work on mobile device Array<click|hover|contextMenu>',
+        },
+        {
+        	name: 'visible',
+        	description: 'whether the dropdown menu is visible',
+        },
+        {
+        	name: 'onVisibleChange',
+        	description: 'a callback function takes an argumen\'t: visible, is executed when the visible state is changed',
+        },
+      ],
+    },
+    {
+      name: 'Dropdown.Button',
+      url: 'https: //ant.design/components/dropdown',
+      category: 'Navigation',
+      discipline: 'development',
+      concepts: [
+        {
+          name: 'disabled',
+          description: 'whether the dropdown menu is disabled'
+        },
+        {
+          name: 'icon',
+          description: 'icon of right',
+        },
+        {
+        	name: 'overlay',
+        	description: 'the dropdown menu',
+        },
+        {
+        	name: 'placement',
+        	description: 'placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight	String	bottomLeft',
+        },
+        {
+        	name: 'size',
+        	description: 'size of the button, the same as Button',
+        },
+        {
+        	name: 'trigger',
+        	description: 'the trigger mode which executes the drop-down action, hover doesn\'t work on mobile device Array<click|hover|contextMenu>',
+        },
+        {
+        	name: 'type',
+        	description: 'type of the button, the same as Button',
+        },
+        {
+        	name: 'visible',
+        	description: 'whether the dropdown menu is visible',
+        },
+        {
+        	name: 'onClick',
+        	description: 'a callback function, the same as Button, which will be executed when you click the button on the left',
+        },
+        {
+        	name: 'onVisibleChange',
+        	description: 'a callback function takes an argumen\'t: visible, is executed when the visible state is changed',
+        },
+      ],
     },
     {
       name: 'Menu',
@@ -456,6 +543,206 @@
       url: 'https://ant.design/components/select',
       category: 'Data Entry',
       discipline: 'development',
+      description: 'Select component to select value from options. When To Use: A dropdown menu for displaying choices - an elegant alternative to the native <select> element. Utilizing Radio is recommended when there are fewer total options (less than 5).',
+      concepts: [
+        { 
+          name: 'allowClear',
+          description: 'Show clear button.',
+        },
+        { 
+          name: 'autoClearSearchValue', 
+          description: 'Whether the current search will be cleared on selecting an item. Only applies when mode is set to multiple or tags.',
+        },
+        { 
+          name: 'autoFocus', 
+          description: 'Get focus by default',
+        },
+        { 
+          name: 'defaultActiveFirstOption', 
+          description: 'Whether active first option by default',
+        },
+        {
+          name: 'defaultValue', 
+          description: 'Initial selected option.',
+        },
+        { 
+          name: 'number', 
+          description: '',
+        },
+        { 
+          name: 'LabeledValue', 
+          description: '',
+        },
+        { 
+          name: 'disabled', 
+          description: 'Whether disabled select',
+        },
+        { 
+          name: 'dropdownClassName',
+          description: 'className of dropdown menu',
+        },
+        { 
+          name: 'dropdownMatchSelectWidth',
+          description: 'Whether dropdown\'s width is same with select.',
+        },
+        { 
+          name: 'dropdownRender', 
+          description: 'Customize dropdown content',
+        },
+        { 
+          name: 'dropdownStyle', 
+          description: 'style of dropdown menu',
+        },
+        { 
+          name: 'filterOption', 
+          description: 'If true, filter options by input, if function, filter options against it. The function will receive two arguments, inputValue and option, if the function returns true, the option will be included in the filtered set; Otherwise, it will be excluded.',
+        },
+        { 
+          name: 'firstActiveValue', 
+          description: 'Value of action option by default',
+        },
+        { 
+          name: 'getPopupContainer', 
+          description: 'Parent Node which the selector should be rendered to. Default to body. When position issues happen, try to modify it into scrollable content and position it relative.',
+        },
+        { 
+          name: 'labelInValue', 
+          description: 'whether to embed label in value, turn the format of value from string to {key: string, label: ReactNode
+          }',
+        },
+        { 
+          name: 'maxTagCount',
+          description: 'Max tag count to show',
+        },
+        { 
+          name: 'maxTagTextLength',
+          description: 'Max tag count to show',
+        },
+        { 
+          name: 'maxTagPlaceholder',
+          description: 'Placeholder for not showing tags',
+        },
+        { 
+          name: 'mode',
+          description: 'Set mode of Select \'default\' | \'multiple\' | \'tags\'	\'default\'',
+        },
+        { 
+          name: 'notFoundContent',
+          description: 'Specify content to show when no result matches.',
+        },
+        { 
+          name: 'optionFilterProp',
+          description: 'Which prop value of option will be used for filter if filterOption is true',
+        },
+        { 
+          name: 'optionLabelProp', 
+          description: 'Which prop value of option will render as content of select. Example	string	value for combobox, children for other modes',
+        },
+        { 
+          name: 'placeholder',
+          description: 'Placeholder of select',
+        },
+        { 
+          name: 'showArrow', 
+          description: 'Whether to show the drop-down arrow',
+        },
+        { 
+          name: 'showSearch', 
+          description: 'Whether show search input in single mode.',
+        },
+        { 
+          name: 'size', 
+          description: 'Size of Select input.',
+        },
+        { 
+          name: 'suffixIcon', 
+          description: 'The custom suffix icon',
+        },
+        { 
+          name: 'removeIcon', 
+          description: 'The custom remove icon',
+        },
+        { 
+          name: 'clearIcon', 
+          description: 'The custom clear icon',
+        },
+        { 
+          name: 'menuItemSelectedIcon', 
+          description: 'The custom menuItemSelected icon with multiple options',
+        },
+        { 
+          name: 'tokenSeparators', 
+          description: 'Separator used to tokenize on tag/multiple mode',
+        },
+        { 
+          name: 'value', 
+          description: 'Current selected option.',
+        },
+        { 
+          name: 'number', 
+          description: '',
+        },
+        { 
+          name: 'LabeledValue', 
+          description: '',
+        },
+        { 
+          name: 'onBlur', 
+          description: 'Called when blur',
+        },
+        { 
+          name: 'onChange', 
+          description: 'Called when select an option or input value change, or value of input is changed in combobox mode',
+        },
+        { 
+          name: 'onDeselect', 
+          description: 'Called when a option is deselected, param is the selected option\'s value. Only called for multiple or tags, effective in multiple or tags mode only.',
+        },
+        { 
+          name: 'onFocus', 
+          description: 'Called when focus',
+        },
+        { 
+          name: 'onInputKeyDown', 
+          description: 'Called when key pressed',
+        },
+        { 
+          name: 'onMouseEnter', 
+          description: 'Called when mouse enter',
+        },
+        { 
+          name: 'onMouseLeave', 
+          description: 'Called when mouse leave',
+        },
+        { 
+          name: 'onPopupScroll', 
+          description: 'Called when dropdown scrolls',
+        },
+        { 
+          name: 'onSearch', 
+          description: 'Callback function that is fired when input changed.',
+        },
+        { 
+          name: 'onSelect', 
+          description: 'Called when a option is selected, the params are option\'s value (or key) and option instance.',
+        },
+        { 
+          name: 'defaultOpen', 
+          description: 'Initial open state of dropdown',
+        },
+        { 
+          name: 'open', 
+          description: 'Controlled open state of dropdown',
+        },
+        { 
+          name: 'onDropdownVisibleChange', 
+          description: 'Call when dropdown open',
+        },
+        { 
+          name: 'loading', 
+          description: 'indicate loading state',
+        },
+      ],
     },
     {
       name: 'TreeSelect',
@@ -561,7 +848,7 @@
     },
     {
       name: 'Tooltip',
-      url: 'https://ant.design/components/tooltip',
+      url: 'https: //ant.design/components/tooltip',
       category: 'Data Display',
       discipline: 'development',
     },
