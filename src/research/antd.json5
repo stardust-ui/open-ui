@@ -607,8 +607,7 @@
         },
         { 
           name: 'labelInValue', 
-          description: 'whether to embed label in value, turn the format of value from string to {key: string, label: ReactNode
-          }',
+          description: 'whether to embed label in value, turn the format of value from string to {key: string, label: ReactNode}',
         },
         { 
           name: 'maxTagCount',
