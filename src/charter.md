@@ -1,3 +1,7 @@
+---
+menu: About
+---
+
 ## Vision
 
 The web deserves interoperability between component frameworks and design systems.
