@@ -477,6 +477,27 @@
       url: 'https://ant.design/components/checkbox',
       category: 'Data Entry',
       discipline: 'development',
+      concepts: [
+      	{ name: 'autoFocus', description:	'get focus when component mounted', },
+      	{ name: 'checked', description:	'Specifies whether the checkbox is selected.', },
+      	{ name: 'defaultChecked', description:	'Specifies the initial state: whether or not the checkbox is selected.', },
+      	{ name: 'disabled', description:	'Disable checkbox', },
+      	{ name: 'indeterminate', description:	'indeterminate checked state of checkbox', },
+      ]
+    },
+    {
+      name: 'CheckboxGroup',
+      url: 'https://ant.design/components/checkbox',
+      category: 'Data Entry',
+      discipline: 'development',
+      concepts: [
+				{ name: 'defaultValue', description:	'Default selected value', },
+				{ name: 'disabled', description:	'Disable all checkboxes', },
+				{ name: 'name', description:	'The name property of all input[type="checkbox"] children', },
+				{ name: 'options', description:	'Specifies options', },
+				{ name: 'value', description:	'Used for setting the currently selected value.', },
+				{ name: 'onChange', description:	'The callback function that is triggered when the state changes.', },
+      ]
     },
     {
       name: 'Cascader',
