@@ -69,14 +69,27 @@ export const anatomiesByComponent = _.mapValues(componentsByName, components =>
 export const concepts = _.compact(_.flatMap(components, 'concepts'))
 export const conceptNames = _.uniq(_.map(concepts, 'name'))
 export const conceptsByName = _.groupBy(concepts, 'name')
+export const conceptsByComponent = components.reduce((acc, next) => {
+  acc[next.name] = acc[next.name] || []
+
+  _.forEach(next.concepts, concept => {
+    if (!_.find(acc[next.name], { name: concept.name })) {
+      acc[next.name].push(concept)
+    }
+  })
+  acc[next.name] = _.sortBy(acc[next.name], 'name')
+  return acc
+}, {})
 
 // Images
 export const getImagesForComponentConcept = (componentName, conceptName) => {
-  return components.reduce((acc, { name, concepts }) => {
-    if (name === componentName) {
-      return acc.concat(_.map(_.filter(concepts, { name: conceptName }), 'image'))
-    }
+  return components
+    .reduce((acc, { name, concepts }) => {
+      if (name === componentName) {
+        return acc.concat(_.map(_.filter(concepts, { name: conceptName }), 'image'))
+      }
 
-    return acc
-  }, [])
+      return acc
+    }, [])
+    .filter(Boolean)
 }
