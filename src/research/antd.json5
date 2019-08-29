@@ -168,11 +168,6 @@
           image: 'antd-text-editable.png',
         },
         {
-          name: 'onChange',
-          description: 'Trigger when user edit the content',
-          // TODO: image: '',
-        },
-        {
           name: 'strong',
           description: 'bold style',
           image: 'antd-text-strong.png',
