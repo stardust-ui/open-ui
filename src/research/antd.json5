@@ -475,7 +475,6 @@
       concepts: [
       	{ name: 'autoFocus', description:	'get focus when component mounted', },
       	{ name: 'checked', description:	'Specifies whether the checkbox is selected.', image: 'antd-checkbox-checked.png', },
-      	{ name: 'defaultChecked', description:	'Specifies the initial state: whether or not the checkbox is selected.', image: 'antd-checkbox-checked.png', },
       	{ name: 'disabled', description:	'Disable checkbox', image: 'antd-checkbox-disabled.png', },
       	{ name: 'indeterminate', description:	'indeterminate checked state of checkbox', },
       ]
@@ -551,7 +550,6 @@
 				{ name: 'autoFocus', description:	'get focus when component mounted' },
 				{ name: 'checked', description:	'determine whether the Switch is checked', image: 'antd-switch-checked.png', },
 				{ name: 'checkedChildren', description:	'content to be shown when the state is checked', image: 'antd-switch-checkedchildren.png', },
-				{ name: 'defaultChecked', description:	'to set the initial state', },
 				{ name: 'disabled', description:	'Disable switch', image: 'antd-switch-disabled.png', },
 				{ name: 'loading', description:	'loading state of switch', image: 'antd-switch-loading.png', },
 				{ name: 'size', description:	'the size of the Switch, options: default small	string', image: 'antd-switch-size.png', },

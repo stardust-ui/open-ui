@@ -62,7 +62,6 @@
       category: 'core',
       concepts: [
         { name: 'basic', description: '', image: 'atlaskit-checkbox-basic.png', },
-      	{ name: 'defaultChecked', description: 'Sets whether the checkbox begins checked.', image: 'atlaskit-checkbox-defaultchecked.png', },
       	{ name: 'id', description: 'id assigned to input', },
       	{ name: 'inputRef', description: 'Callback to receive a reference.', },
       	{ name: 'isChecked', description: 'Sets whether the checkbox is checked or unchecked.', },
