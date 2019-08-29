@@ -52,5 +52,5 @@
     },
   },
 
-  required: ['anatomy', ',name', 'category', 'url'],
+  required: ['name', 'category', 'url'],
 }
