@@ -1,0 +1,6 @@
+export { default as Anatomy } from './Anatomy'
+export { default as Concepts } from './Concepts'
+export { default as ConceptCoverage } from './ConceptCoverage'
+export { default as Image } from './Image'
+export { default as Specimens } from './Specimens'
+export { default as ComponentNameMatrix } from './ComponentNameMatrix'

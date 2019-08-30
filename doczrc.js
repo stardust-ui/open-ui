@@ -1,5 +1,7 @@
+import emoji from 'remark-emoji'
+import images from 'remark-images'
+
 export default {
-  base: "/specifications/",
-  title: "Stardust UI Specifications",
-  description: "This is my awesome documentation"
-};
+  title: 'Open UI',
+  mdPlugins: [images, emoji],
+}
