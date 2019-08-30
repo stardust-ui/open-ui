@@ -7,9 +7,6 @@ const Specimens = ({ component, concept }) => {
 
   return (
     <div style={{ border: '1px solid #ccc' }}>
-      <div style={{ textAlign: 'center', textTransform: 'uppercase', fontSize: '12px' }}>
-        <strong>Specimens</strong>
-      </div>
       <div style={{ padding: '1rem' }}>
         {images.map((src, i) => (
           <Image key={i} src={src} />

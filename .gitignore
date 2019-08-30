@@ -1,6 +1,7 @@
 *.log*
 *.iml
 
+.cache
 .docz
 .DS_Store
 .idea
