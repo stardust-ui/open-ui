@@ -3,6 +3,9 @@
 - [x] Vision page
 - [x] Auto iterate concepts in component detail page
 - [ ] Extend schemas to allow for 'proposedName' to group divergent names
+- [ ] Document some sources from Alexa 100, create Add a Web Site/App
+- [ ] Cleanup Checkbox concepts, document "why/how" as we go
+- [ ] Cleanup Dropdown concepts, document "why/how" as we go
 
 ---
 
