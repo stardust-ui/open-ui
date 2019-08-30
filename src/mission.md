@@ -1,6 +1,11 @@
 ---
-menu: About
+route: /
 ---
+# Open UI
+
+This project is in it's infancy. Expect rapid iteration and high-flux while we flesh out the mission and process.
+
+Thanks!
 
 ## Vision
 
