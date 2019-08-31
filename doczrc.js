@@ -1,12 +1,6 @@
-import emoji from 'remark-emoji'
-import images from 'remark-images'
-
-const PROD = process.env.NODE_ENV === 'production'
-
 export default {
   title: 'Open UI',
-  mdPlugins: [images, emoji],
-  base: PROD ? '/specifications/' : '/',
+  base: '/',
   ignore: [
     'README.md',
     'CHANGELOG.md',

@@ -5,7 +5,7 @@
   "scripts": {
     "build": "docz build && echo \"open-ui.org\" > .docz/dist/CNAME",
     "predeploy": "yarn build",
-    "deploy": "cross-env NODE_ENV=production gh-pages -d .docz/dist -m \"deploy docs [ci skip]\"",
+    "deploy": "gh-pages -d .docz/dist -m \"deploy docs [ci skip]\"",
     "start": "cross-env BROWSER=NONE docz dev"
   },
   "husky": {
@@ -42,8 +42,6 @@
     "husky": "^3.0.4",
     "json5-loader": "^3.0.0",
     "lint-staged": "^9.2.5",
-    "prettier": "^1.18.2",
-    "remark-emoji": "^2.0.2",
-    "remark-images": "^1.0.0"
+    "prettier": "^1.18.2"
   }
 }
