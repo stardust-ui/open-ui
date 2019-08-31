@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "https://github.com/stardust-ui/specifications",
   "scripts": {
-    "build": "kill-port 3000 && (yarn start &) && wait-on http-get://localhost:3000 && kill-port 3000 && yarn build",
+    "build": "kill-port 3000 && (yarn start &) && wait-on http-get://localhost:3000 && kill-port 3000 && docz build",
     "predeploy": "yarn build",
     "deploy": "echo \"open-ui.org\" > .docz/dist/CNAME && gh-pages -d .docz/dist -m \"deploy docs [ci skip]\"",
     "start": "cross-env BROWSER=NONE docz dev"
