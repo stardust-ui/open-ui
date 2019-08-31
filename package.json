@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "repository": "https://github.com/stardust-ui/specifications",
   "scripts": {
-    "build": "docz build",
+    "build": "docz build && echo \"open-ui.org\" > .docz/dist/CNAME",
     "predeploy": "yarn build",
-    "deploy": "gh-pages -d .docz/dist -m \"deploy docs [ci skip]\"",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d .docz/dist -m \"deploy docs [ci skip]\"",
     "start": "cross-env BROWSER=NONE docz dev"
   },
   "husky": {

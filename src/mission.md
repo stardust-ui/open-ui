@@ -3,7 +3,7 @@ route: /
 ---
 # Open UI
 
-This project is in it's infancy. Expect rapid iteration and high-flux while we flesh out the mission and process.
+This project is in its infancy. Expect rapid iteration and high-flux while we flesh out the mission and process.
 
 Thanks!
 
