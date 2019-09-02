@@ -1,5 +1,7 @@
 import Typography from 'typography'
 
+const scale = 1 / 2
+
 const typography = new Typography({
   includeNormalize: true,
   googleFonts: [
@@ -9,10 +11,9 @@ const typography = new Typography({
 
   // Base
   baseFontSize: '18px',
-  baseLineHeight: 1.45,
-  scaleRatio: 2,
-  baseParagraphSpacing: 0.75,
-  blockMarginBottom: 1,
+  baseLineHeight: 3 * scale,
+  scaleRatio: 4 * scale,
+  blockMarginBottom: 1.5 * scale,
 
   // Headers
   headerFontFamily: ['Cabin', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],

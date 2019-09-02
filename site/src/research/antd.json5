@@ -155,7 +155,6 @@
         {
           name: 'ellipsis',
           description: 'Display ellipsis when overflow',
-          // TODO: image: '',
         },
         {
           name: 'mark',
@@ -201,70 +200,57 @@
         {
           name: 'code',
           description: 'code style',
-          // TODO: image: '',
         },
         {
           name: 'copyable',
           description: 'Config copy. Can set copy text and callback when is an object',
-          // TODO: image: '',
         },
         {
           name: 'delete',
           description: 'delete line style',
-          // TODO: image: '',
         },
         {
           name: 'disabled',
           description: 'Disable content',
-          // TODO: image: '',
         },
         {
           name: 'editable',
           description: 'Editable. Can control edit state when is object',
-          // TODO: image: '',
         },
         {
           name: 'ellipsis',
           description: 'Display ellipsis when overflow. Can config rows and expandable by using object',
-          // TODO: image: '',
         },
         {
           name: 'level',
           description: 'Set content importance. Match with h1, h2, h3, h4',
-          // TODO: image: '',
         },
         {
           name: 'mark',
           description: 'mark style',
-          // TODO: image: '',
         },
         {
           name: 'underline',
           description: 'underline style',
-          // TODO: image: '',
         },
         {
           name: 'onChange',
           description: 'Trigger when user edit the content',
-          // TODO: image: '',
         },
         {
           name: 'secondary',
           group: 'type',
           description: 'Content type',
-          // TODO: image: '',
         },
         {
           name: 'warning',
           group: 'type',
           description: 'Content type',
-          // TODO: image: '',
         },
         {
           name: 'danger',
           group: 'type',
           description: 'Content type',
-          // TODO: image: '',
         },
       ],
     },
@@ -357,7 +343,7 @@
         },
         {
           name: 'getPopupContainer',
-          description: 'to set the container of the dropdown menu. The default is to create a div element in body, you can reset it to the scrolling area and make a relative reposition. example	Function(triggerNode)	() => document.body',
+          description: 'to set the container of the dropdown menu. The default is to create a div element in body, you can reset it to the scrolling area and make a relative reposition. example Function(triggerNode)  () => document.body',
         },
         {
           name: 'overlay',
@@ -373,7 +359,7 @@
         },
         {
           name: 'placement',
-          description: 'placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight	String	bottomLeft',
+          description: 'placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight  String  bottomLeft',
         },
         {
           name: 'trigger',
@@ -409,7 +395,7 @@
         },
         {
           name: 'placement',
-          description: 'placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight	String	bottomLeft',
+          description: 'placement of pop menu: bottomLeft bottomCenter bottomRight topLeft topCenter topRight  String  bottomLeft',
         },
         {
           name: 'size',
@@ -500,7 +486,10 @@
       discipline: 'development',
       concepts: [
         { name: 'disabled', description: 'Disable all checkboxes' },
-        { name: 'name', description: 'The name property of all input[type="checkbox"] children' },
+        {
+          name: 'name',
+          description: 'The name property of all input[type="checkbox"] children',
+        },
         { name: 'options', description: 'Specifies options' },
         { name: 'value', description: 'Used for setting the currently selected value.' },
       ],
@@ -571,7 +560,11 @@
           description: 'content to be shown when the state is checked',
           image: 'antd-switch-checkedchildren.png',
         },
-        { name: 'disabled', description: 'Disable switch', image: 'antd-switch-disabled.png' },
+        {
+          name: 'disabled',
+          description: 'Disable switch',
+          image: 'antd-switch-disabled.png',
+        },
         {
           name: 'loading',
           description: 'loading state of switch',
@@ -579,7 +572,7 @@
         },
         {
           name: 'size',
-          description: 'the size of the Switch, options: default small	string',
+          description: 'the size of the Switch, options: default small  string',
           image: 'antd-switch-size.png',
         },
         {
@@ -681,7 +674,7 @@
         },
         {
           name: 'mode',
-          description: "Set mode of Select 'default' | 'multiple' | 'tags'	'default'",
+          description: "Set mode of Select 'default' | 'multiple' | 'tags'  'default'",
         },
         {
           name: 'notFoundContent',
@@ -693,7 +686,7 @@
         },
         {
           name: 'optionLabelProp',
-          description: 'Which prop value of option will render as content of select. Example	string	value for combobox, children for other modes',
+          description: 'Which prop value of option will render as content of select. Example  string  value for combobox, children for other modes',
         },
         {
           name: 'placeholder',

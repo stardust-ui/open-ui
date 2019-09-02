@@ -56,7 +56,11 @@
       url: 'https://material.io/components/web/catalog/dialogs',
       category: 'Components',
     },
-    { name: 'DOM', url: 'https://material.io/components/web/catalog/dom', category: 'Components' },
+    {
+      name: 'DOM',
+      url: 'https://material.io/components/web/catalog/dom',
+      category: 'Components',
+    },
     {
       name: 'Drawers',
       url: 'https://material.io/components/web/catalog/drawers',
@@ -192,7 +196,11 @@
       url: 'https://material.io/components/web/catalog/ripples',
       category: 'Components',
     },
-    { name: 'RTL', url: 'https://material.io/components/web/catalog/rtl', category: 'Components' },
+    {
+      name: 'RTL',
+      url: 'https://material.io/components/web/catalog/rtl',
+      category: 'Components',
+    },
     {
       name: 'Shape',
       url: 'https://material.io/components/web/catalog/shape',

@@ -64,7 +64,10 @@
         { name: 'basic', description: '', image: 'atlaskit-checkbox-basic.png' },
         { name: 'id', description: 'id assigned to input' },
         { name: 'inputRef', description: 'Callback to receive a reference.' },
-        { name: 'isChecked', description: 'Sets whether the checkbox is checked or unchecked.' },
+        {
+          name: 'isChecked',
+          description: 'Sets whether the checkbox is checked or unchecked.',
+        },
         {
           name: 'isDisabled',
           description: 'Sets whether the checkbox is disabled.',
@@ -104,7 +107,10 @@
       url: 'https://atlaskit.atlassian.com/packages/core/checkbox',
       category: 'core',
       concepts: [
-        { name: 'isChecked', description: 'Sets whether the checkbox is checked or unchecked.' },
+        {
+          name: 'isChecked',
+          description: 'Sets whether the checkbox is checked or unchecked.',
+        },
         { name: 'isDisabled', description: 'Sets whether the checkbox is disabled.' },
         { name: 'isFocused', description: 'Sets the checkbox focus' },
         {

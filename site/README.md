@@ -1,13 +1,8 @@
 # Open UI
 
-### Develop
-
 ```sh
-yarn start
-```
-
-### Build
-
-```sh
-yarn build
+yarn            # install
+yarn start      # develop locally
+yarn build      # build for production
+yarn publish    # publish site
 ```
