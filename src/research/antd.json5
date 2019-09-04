@@ -474,8 +474,14 @@
       discipline: 'development',
       concepts: [
         {
+        	name: 'basic',
+        	description: 'Basic checkbox',
+        	image: 'antd-checkbox-basic.png',
+        },
+        {
           name: 'autoFocus',
           description: 'get focus when component mounted',
+          image: 'antd-checkbox-autofocus.png'
         },
         {
           name: 'checked',
@@ -490,6 +496,7 @@
         {
           name: 'indeterminate',
           description: 'indeterminate checked state of checkbox',
+          image: 'antd-checkbox-indeterminate.png'
         },
       ],
     },
@@ -558,9 +565,25 @@
       url: 'https://ant.design/components/switch',
       category: 'Data Entry',
       discipline: 'development',
+      anatomy: [
+        { name: 'checkedContent' },
+        { name: 'uncheckedContent' },
+        { name: 'root', implicit: true },
+        { name: 'thumb', implicit: true },
+        { name: 'loadingContent', implicit: true},
+      ],
       description: 'Switching Selector. When To Use: If you need to represent the switching between two states or on-off state. The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.',
       concepts: [
-        { name: 'autoFocus', description: 'get focus when component mounted' },
+        {
+          name: 'basic',
+          description: 'basic switch',
+          image: 'antd-switch-basic.png',
+        },
+        {
+        	name: 'autoFocus',
+        	description: 'get focus when component mounted',
+        	image: 'antd-switch-autofocus.png',
+        },
         {
           name: 'checked',
           description: 'determine whether the Switch is checked',
@@ -578,16 +601,22 @@
           image: 'antd-switch-loading.png',
         },
         {
-          name: 'size',
+          name: 'default',
+          category: 'size',
+          description: 'the size of the Switch: default',
+          image: 'antd-switch-size-default.png',
+        },
+				{
+          name: 'small',
+          category: 'size',
           description: 'the size of the Switch, options: default small	string',
-          image: 'antd-switch-size.png',
+          image: 'antd-switch-size-small.png',
         },
         {
           name: 'unCheckedChildren',
           description: 'content to be shown when the state is unchecked',
           image: 'antd-switch-uncheckedchildren.png',
         },
-        { name: 'className', description: 'additional class to Switch' },
       ],
     },
     {
