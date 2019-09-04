@@ -10,6 +10,11 @@
       type: 'string',
     },
 
+    openuiName: {
+      description: 'The name of the component as defined in OpenUI.',
+      type: 'string',
+    },
+
     url: {
       description: 'The url to the component doc page.',
       type: 'string',
@@ -45,6 +50,7 @@
         type: 'object',
         properties: {
           name: { type: 'string' },
+          openuiName: { type: 'string' },
           image: { type: 'string' },
         },
         required: ['name'],
