@@ -5,19 +5,19 @@ const scale = 1 / 2
 const typography = new Typography({
   includeNormalize: true,
   googleFonts: [
-    { name: 'Cabin', styles: ['600'] },
+    { name: 'Cabin', styles: ['500'] },
     { name: 'Source Sans Pro', styles: ['400', '700'] },
   ],
 
   // Base
-  baseFontSize: '18px',
+  baseFontSize: '16px',
   baseLineHeight: 3 * scale,
   scaleRatio: 4 * scale,
   blockMarginBottom: 1.5 * scale,
 
   // Headers
   headerFontFamily: ['Cabin', 'Helvetica Neue', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
-  headerWeight: 600,
+  headerWeight: 500,
   headerGray: 0.1,
   headerGrayHue: 'warm',
 

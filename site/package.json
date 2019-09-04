@@ -12,11 +12,12 @@
     "@mdx-js/react": "^1.4.0",
     "gatsby": "^2.13.50",
     "gatsby-image": "^2.2.8",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-manifest": "^2.2.4",
     "gatsby-plugin-mdx": "^1.0.33",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.3",
-    "gatsby-plugin-sharp": "^2.2.9",
+    "gatsby-plugin-sharp": "2.2.14",
     "gatsby-plugin-theme-ui": "^0.2.38",
     "gatsby-plugin-typography": "^2.3.5",
     "gatsby-source-filesystem": "^2.1.8",
@@ -32,9 +33,7 @@
     "theme-ui": "^0.2.38",
     "typography": "^0.16.19"
   },
-  "keywords": [
-    "open ui"
-  ],
+  "keywords": ["open ui"],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",

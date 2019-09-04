@@ -15,18 +15,10 @@
     }
   },
   "lint-staged": {
-    "**/*.js": [
-      "prettier --write",
-      "git add"
-    ],
-    "**/*.md": [
-      "prettier --parser markdown --write",
-      "git add"
-    ],
-    "**/*.mdx": [
-      "prettier --parser mdx --write",
-      "git add"
-    ]
+    "**/*.js": ["prettier --write", "git add"],
+    "**/*.{json,json5}": ["prettier --parser json --write", "git add"],
+    "**/*.md": ["prettier --parser markdown --write", "git add"],
+    "**/*.mdx": ["prettier --parser mdx --write", "git add"]
   },
   "dependencies": {
     "lodash": "^4.17.15",

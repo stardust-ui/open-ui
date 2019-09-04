@@ -31,23 +31,29 @@ module.exports = {
       },
     },
 
-    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sharp',
 
     'gatsby-transformer-sharp',
 
-    'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: './src/images/logo-green.png',
+      },
+    },
 
-    // TODO: do we need this?
+    'gatsby-plugin-react-helmet',
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-default-mdx-basic',
-        short_name: 'starter',
+        name: 'Open UI',
+        short_name: 'OUI',
         start_url: '/',
-        background_color: '#00a453',
+        background_color: '#fff',
         theme_color: '#00a453',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/logo-green.png', // This path is relative to the root of the site.
       },
     },
 

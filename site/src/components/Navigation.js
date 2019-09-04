@@ -28,7 +28,7 @@ const Navigation = ({ style }) => (
       const menu = _.sortBy(_.toPairs(_.groupBy(nodes, 'menu')), _.first)
 
       return (
-        <nav style={{ ...style, fontSize: '0.875em' }}>
+        <nav style={style}>
           <ul style={{ position: 'sticky', top: '1em', margin: 0 }}>
             {menu.map(([category, items]) => (
               <li key={category} style={{ margin: 0, listStyleType: 'none' }}>
@@ -58,6 +58,7 @@ const Navigation = ({ style }) => (
                           margin: 0,
                           borderLeft: '2px solid transparent',
                           borderRadius: '2px',
+                          whiteSpace: 'nowrap',
                         }}
                         activeStyle={{
                           borderLeftColor: '#00a453',
