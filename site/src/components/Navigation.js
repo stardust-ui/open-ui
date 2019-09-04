@@ -41,7 +41,7 @@ const Navigation = ({ style }) => (
                 >
                   {category}
                 </div>
-                <ul style={{ margin: '0 0 1em 0' }}>
+                <ul style={{ margin: '0.25em 0 1.5em 0' }}>
                   {items.map(item => (
                     <li
                       key={item.name}

@@ -18,7 +18,7 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div style={{ paddingBottom: '10rem' }}>
         <Header
           siteTitle={data.site.siteMetadata.title}
           githubURL={data.site.siteMetadata.githubURL}
@@ -41,7 +41,7 @@ const Layout = ({ children }) => (
 
           <div style={{ gridArea: 'view' }}>{children}</div>
         </div>
-      </>
+      </div>
     )}
   />
 )

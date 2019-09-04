@@ -1,31 +1,43 @@
 import React from 'react'
 import _ from 'lodash'
-import { doesSourceHaveComponentConcept, sourceNames } from '../research'
+import { sourceNames, getSourcesWithComponentConcept } from '../research'
 
 const ConceptCoverage = ({ component, concept }) => {
+  const withConcept = getSourcesWithComponentConcept(component, concept)
+  const withoutConcept = _.difference(sourceNames, withConcept)
   return (
     <div style={{ display: 'inline-flex', verticalAlign: 'middle' }}>
-      {_.map(sourceNames, sourceName => {
-        const hasConcept = doesSourceHaveComponentConcept(sourceName, component, concept)
+      {_.map(withConcept, sourceName => (
+        <div
+          key={sourceName}
+          style={{
+            display: 'inline-flex',
+            marginRight: '1px',
+            padding: '4px 2px',
+            color: 'white',
+            fontSize: 10,
+            textTransform: 'uppercase',
+            background: '#6C6',
+          }}
+          title={sourceName}
+        />
+      ))}
 
-        return { sourceName, hasConcept }
-      })
-        .sort((a, b) => (b.hasConcept ? 1 : -1))
-        .map(item => (
-          <div
-            key={item.sourceName}
-            style={{
-              display: 'inline-flex',
-              marginRight: '1px',
-              padding: '4px 2px',
-              color: 'white',
-              fontSize: 10,
-              textTransform: 'uppercase',
-              background: item.hasConcept ? '#6C6' : '#C66',
-            }}
-            title={item.sourceName}
-          />
-        ))}
+      {_.map(withoutConcept, sourceName => (
+        <div
+          key={sourceName}
+          style={{
+            display: 'inline-flex',
+            marginRight: '1px',
+            padding: '4px 2px',
+            color: 'white',
+            fontSize: 10,
+            textTransform: 'uppercase',
+            background: '#C66',
+          }}
+          title={sourceName}
+        />
+      ))}
     </div>
   )
 }

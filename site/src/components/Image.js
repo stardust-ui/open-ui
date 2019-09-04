@@ -1,10 +1,15 @@
 import React from 'react'
 
-const Image = ({ src, alt = 'An image.', style }) => {
+const Image = ({ src, alt = src, style, ...rest }) => {
+  let imageData
+  try {
+    imageData = require(`../images/${src}`)
+  } catch (error) {}
+
   return (
     <img
       alt={alt}
-      src={require(`../images/${src}`)}
+      src={imageData}
       style={{
         display: 'inline-block',
         verticalAlign: 'middle',
@@ -12,6 +17,7 @@ const Image = ({ src, alt = 'An image.', style }) => {
         margin: 0,
         ...style,
       }}
+      {...rest}
     />
   )
 }

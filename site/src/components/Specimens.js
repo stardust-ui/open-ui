@@ -9,7 +9,7 @@ const Specimens = ({ component, concept }) => {
     <div style={{ border: '1px solid #ccc' }}>
       <div style={{ padding: '1rem' }}>
         {images.map((src, i) => (
-          <Image key={i} src={src} />
+          <Image key={i} src={src} title={src} />
         ))}
       </div>
     </div>
