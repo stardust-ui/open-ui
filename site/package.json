@@ -7,14 +7,13 @@
     "type": "git",
     "url": "https://github.com/christopherbiscardi/gatsby-starter-mdx-basic"
   },
-  "keywords": ["open ui"],
+  "keywords": [
+    "open ui"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "nodemon -w package.json -w gatsby-config.es.js -w gatsby-config.js -w gatsby-node.js --exec \"gatsby develop\"",
-    "start": "yarn develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gatsby develop"
   },
   "husky": {
     "hooks": {
@@ -23,10 +22,22 @@
     }
   },
   "lint-staged": {
-    "**/*.js": ["prettier --write", "git add"],
-    "**/*.{json,json5}": ["prettier --parser json --write", "git add"],
-    "**/*.md": ["prettier --parser markdown --write", "git add"],
-    "**/*.mdx": ["prettier --parser mdx --write", "git add"]
+    "**/*.js": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{json,json5}": [
+      "prettier --parser json --write",
+      "git add"
+    ],
+    "**/*.md": [
+      "prettier --parser markdown --write",
+      "git add"
+    ],
+    "**/*.mdx": [
+      "prettier --parser mdx --write",
+      "git add"
+    ]
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
@@ -67,7 +78,6 @@
     "json5": "^2.1.0",
     "json5-loader": "^3.0.0",
     "lint-staged": "^9.2.5",
-    "nodemon": "^1.19.1",
     "prettier": "^1.18.2"
   }
 }
