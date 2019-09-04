@@ -149,19 +149,19 @@
       ],
       concepts: [
         {
-        	name: 'basic',
-        	description: 'Basic switch',
-        	image: 'material-ui-web-switch-basic.png',
+          name: 'basic',
+          description: 'Basic switch',
+          image: 'material-ui-web-switch-basic.png',
         },
         {
-        	name: 'checked',
-        	description: 'Checked switch',
-        	image: 'material-ui-web-switch-checked.png',
+          name: 'checked',
+          description: 'Checked switch',
+          image: 'material-ui-web-switch-checked.png',
         },
         {
-        	name: 'disabled',
-        	description: 'Disabled switch',
-        	image: 'material-ui-web-switch-disabled.png',
+          name: 'disabled',
+          description: 'Disabled switch',
+          image: 'material-ui-web-switch-disabled.png',
         },
       ]
     },
