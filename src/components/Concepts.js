@@ -10,7 +10,8 @@ const Concepts = ({ component }) => {
       {_.map(conceptsByComponent[component], (concept, conceptOpenUIName) => (
         <div key={conceptOpenUIName}>
           <h3>
-            {conceptOpenUIName} <ConceptCoverage component={component} concept={conceptOpenUIName} />
+            {conceptOpenUIName}{' '}
+            <ConceptCoverage component={component} concept={conceptOpenUIName} />
           </h3>
           <Specimens component={component} concept={conceptOpenUIName} />
         </div>
