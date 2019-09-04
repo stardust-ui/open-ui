@@ -1,10 +1,11 @@
 import React from 'react'
+import _ from 'lodash'
 import { anatomiesByComponent } from '../research'
 
 const Anatomy = props => {
   return (
     <ul>
-      {anatomiesByComponent[props.component].map(({ name }) => (
+      {_.map(anatomiesByComponent[props.component], ({ name }) => (
         <li key={name}>{name}</li>
       ))}
     </ul>
