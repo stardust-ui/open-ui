@@ -1,21 +1,24 @@
-import path from 'path'
 import images from 'remark-images'
 import emoji from 'remark-emoji'
-import { componentNamesUnique } from './src/research'
-import _ from 'lodash'
 
 module.exports = {
   siteMetadata: {
     title: 'Open UI',
     description: 'Open UI ',
     author: 'Open UI',
-    menu: _.map(componentNamesUnique, name => ({
-      name,
-      path: '/components/' + _.kebabCase(name),
-    })),
   },
 
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `images`, path: `${__dirname}/src/images` },
+    },
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `pages`, path: `${__dirname}/src/pages` },
+    },
+
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
@@ -29,20 +32,11 @@ module.exports = {
 
     'gatsby-plugin-react-helmet',
 
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: { name: `images`, path: `${__dirname}/src/images` },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: { name: `pages`, path: `${__dirname}/src/pages` },
-    },
-
     'gatsby-transformer-sharp',
 
     'gatsby-plugin-sharp',
 
+    // TODO: do we need this?
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

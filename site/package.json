@@ -46,6 +46,7 @@
     "@babel/register": "^7.5.5",
     "gatsby-plugin-remove-trailing-slashes": "^2.1.4",
     "json5": "^2.1.0",
+    "json5-loader": "^3.0.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2"
   },

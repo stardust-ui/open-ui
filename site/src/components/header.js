@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Header = ({ siteTitle, menu }) => (
+const Header = ({ siteTitle }) => (
   <header
     style={{
       background: 'rebeccapurple',
@@ -18,7 +18,7 @@ const Header = ({ siteTitle, menu }) => (
       <div
         style={{
           margin: '0 auto',
-          maxWidth: 960,
+          maxWidth: 1200,
           padding: '1.45rem 1.0875rem',
           display: 'flex',
           justifyItems: 'space-between',
@@ -36,36 +36,16 @@ const Header = ({ siteTitle, menu }) => (
             {siteTitle}
           </Link>
         </h1>
-        <div>
-          <nav>
-            <ul style={{ display: 'flex', flex: 1 }}>
-              {menu.map(link => (
-                <li
-                  key={link.name}
-                  style={{
-                    listStyleType: `none`,
-                    padding: `1rem`,
-                  }}
-                >
-                  <Link style={{ color: `white` }} to={link.path}>
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
       </div>
     </div>
   </header>
 )
+
 Header.propTypes = {
-  menu: PropTypes.arrayOf(PropTypes.string),
   siteTitle: PropTypes.string,
 }
 
 Header.defaultProps = {
-  menu: '',
   siteTitle: '',
 }
 
