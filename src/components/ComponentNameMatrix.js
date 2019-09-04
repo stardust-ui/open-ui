@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { componentNames, sources, sourcesCount } from '../research'
+import { componentOriginalNames, sources, sourcesCount } from '../research'
 import _ from 'lodash'
 
 const SORT_OPTIONS = {
@@ -22,7 +22,7 @@ const ComponentNameMatrix = props => {
 
   const matchNameMap = new Map([])
 
-  const matchNames = componentNames.map(name => {
+  const matchNames = componentOriginalNames.map(name => {
     const matchName = getMatchName(name)
     matchNameMap.set(name, matchName)
     return matchName
