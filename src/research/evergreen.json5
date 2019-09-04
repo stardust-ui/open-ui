@@ -107,6 +107,19 @@
       category: 'Toggles',
       definition: 'The Checkbox component maps to a checkbox input and a label.',
       url: 'https://evergreen.segment.com/components/checkbox/',
+      concepts: [
+      	{ name: 'basic', description: 'Basic checkbox', image: 'evergreen-checkbox-basic.png', },
+      	{ name: 'id', description: 'The id attribute of the checkbox.', },
+      	{ name: 'name', description: 'The id attribute of the checkbox.', },
+      	{ name: 'label', description: 'Label of the checkbox.', image: 'evergreen-checkbox-label.png'},
+      	{ name: 'value', description: 'The value attribute of the checkbox.', },
+      	{ name: 'checked', description: 'The checked attribute of the checkbox.', image: 'evergreen-checkbox-checked.png', },
+      	{ name: 'indeterminate', description: 'State in addition to "checked" and "unchecked". When true, the checkbox displays a "minus" icon.', image: 'evergreen-checkbox-indeterminate.png', },
+      	{ name: 'disabled', description: 'When true, the checkbox is disabled.', image: 'evergreen-checkbox-disabled.png', },
+      	{ name: 'invalid', description: 'When true, the aria-invalid attribute is true. Used for accessibility.', },
+      	{ name: 'appearance', description: 'The appearance of the checkbox. The default theme only comes with a default style.', },
+      	{ name: 'theme', description: 'Theme provided by ThemeProvider.', },
+      ]
     },
     {
       name: 'Radio',
@@ -125,6 +138,19 @@
       category: 'Toggles',
       definition: 'The Switch component is used as an alternative for the Checkbox component. Except indeterminate and label are not supported.',
       url: 'https://evergreen.segment.com/components/switch/',
+      concepts: [
+        { name: 'basic', description: 'Basic switch', image: 'evergreen-switch-basic.png', },
+     		{ name: 'id', description: 'The id attribute of the checkbox.', },
+      	{ name: 'name', description: 'The id attribute of the checkbox.', },
+      	{ name: 'value', description: 'The value attribute of the checkbox.', },
+      	{ name: 'checked', description: 'The checked attribute of the checkbox.', image: 'evergreen-switch-checked.png', },
+      	{ name: 'disabled', description: 'When true, the checkbox is disabled.', image: 'evergreen-switch-disabled.png', },
+      	{ name: 'invalid', description: 'When true, the aria-invalid attribute is true. Used for accessibility.', },
+      	{ name: 'appearance', description: 'The appearance of the checkbox. The default theme only comes with a default style.', },
+      	{ name: 'theme', description: 'Theme provided by ThemeProvider.', },
+      	{ name: 'hasCheckIcon', description: 'When true, the switch has a check icon.', },
+        { name: 'height', category: 'size', description: 'The height of the switch.', }
+      ]
     },
     {
       name: 'Toaster',
