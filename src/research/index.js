@@ -9,7 +9,7 @@ import evergreen from './evergreen.json5'
 import fabric from './fabric.json5'
 import fast from './fast.json5'
 import lightning from './lightning.json5'
-import material from './material.json5'
+import materialUIWeb from './materialUIWeb.json5'
 import semantic from './semantic.json5'
 import stardust from './stardust.json5'
 import w3 from './w3.json5'
@@ -25,7 +25,7 @@ export const sources = [
   fabric,
   fast,
   lightning,
-  material,
+  materialUIWeb,
   semantic,
   stardust,
   w3,
