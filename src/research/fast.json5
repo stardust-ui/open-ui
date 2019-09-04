@@ -183,8 +183,9 @@
     },
     {
       name: 'Toggle',
+      openUIName: 'Switch',
       url: 'https://explore.fast.design/components/toggle',
-      category: 'Components',
+      category: 'Components'
     },
     {
       name: 'Typography',

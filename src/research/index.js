@@ -31,17 +31,23 @@ export const sources = [
   w3,
 ].map(source => ({
   ...source,
-  components: source.components.map(component => ({
-    ...component,
-    source: source.name,
-    openuiName: component.openuiName || component.name,
-    concepts: _.map(component.concepts, concept => ({
-      ...concept,
-      source: source.name,
-      component: component.openuiName || component.name,
-      openuiName: concept.openuiName || concept.name,
-    })),
-  })),
+  components: source.components.map(component => {
+    const componentOpenUIName = component.openUIName || component.name
+    return {
+      ...component,
+      sourceName: source.name,
+      openUIName: componentOpenUIName,
+      concepts: _.map(component.concepts, concept => {
+        const conceptOpenUIName = concept.openUIName || concept.name
+        return {
+          ...concept,
+          sourceName: source.name,
+          componentName: componentOpenUIName,
+          openUIName: conceptOpenUIName,
+        }
+      }),
+    }
+  }),
 }))
 
 export const sourceNames = _.map(sources, 'name')
@@ -50,10 +56,10 @@ export const sourceComponentConceptMap = sources.reduce((acc, src) => {
   acc[src.name] = {}
 
   _.forEach(src.components, comp => {
-    acc[src.name][comp.openuiName] = {}
+    acc[src.name][comp.openUIName] = {}
 
     _.forEach(comp.concepts, con => {
-      acc[src.name][comp.openuiName][con.openuiName] = con
+      acc[src.name][comp.openUIName][con.openUIName] = con
     })
   })
 
@@ -62,32 +68,28 @@ export const sourceComponentConceptMap = sources.reduce((acc, src) => {
 
 // Components
 export const components = _.flatMap(sources, 'components')
-export const componentNames = _.map(components, 'name')
-export const componentsByOpenuiName = _.groupBy(components, 'openuiName')
+export const componentOriginalNames = _.map(components, 'name')
+export const componentsByName = _.groupBy(components, 'openUIName')
 
 // Anatomies
-export const anatomiesByComponent = _.mapValues(componentsByOpenuiName, components =>
+export const anatomiesByComponent = _.mapValues(componentsByName, components =>
   _.compact(_.uniqBy(_.flatMap(components, 'anatomy'), 'name')),
 )
+
 // Concepts
 export const concepts = _.compact(_.flatMap(components, 'concepts'))
 
-export const conceptsByComponent = _.mapValues(_.groupBy(concepts, 'component'), concepts =>
-  _.groupBy(concepts, 'openuiName'),
+export const conceptsByComponent = _.mapValues(_.groupBy(concepts, 'componentName'), concepts =>
+  _.groupBy(concepts, 'openUIName'),
 )
 
-export const getSourcesWithConcept = (componentOpenuiName, conceptOpenuiName) => {
-  return _.map(
-    _.get(conceptsByComponent, [componentOpenuiName, conceptOpenuiName]),
-    concept => concept.source,
-  )
+export const getSourcesWithComponentConcept = (componentOpenUIName, conceptOpenUIName) => {
+  return _.map(_.get(conceptsByComponent, [componentOpenUIName, conceptOpenUIName]), 'sourceName')
 }
 
 // Images
-export const getImagesForComponentConcept = (componentOpenuiName, conceptOpenuiName) => {
+export const getImagesForComponentConcept = (componentOpenUIName, conceptOpenUIName) => {
   return _.compact(
-    _.map(_.get(conceptsByComponent, [componentOpenuiName, conceptOpenuiName]), concept =>
-      _.get(concept, 'image'),
-    ),
+    _.map(_.get(conceptsByComponent, [componentOpenUIName, conceptOpenUIName]), 'image'),
   )
 }

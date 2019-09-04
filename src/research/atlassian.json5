@@ -355,7 +355,7 @@
     },
     {
       name: 'Toggle',
-      openuiName: 'Switch',
+      openUIName: 'Switch',
       url: 'https://atlaskit.atlassian.com/packages/core/toggle',
       category: 'core',
       concepts: [

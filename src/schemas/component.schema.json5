@@ -10,7 +10,7 @@
       type: 'string',
     },
 
-    openuiName: {
+    openUIName: {
       description: 'The name of the component as defined in OpenUI.',
       type: 'string',
     },
@@ -50,7 +50,7 @@
         type: 'object',
         properties: {
           name: { type: 'string' },
-          openuiName: { type: 'string' },
+          openUIName: { type: 'string' },
           image: { type: 'string' },
         },
         required: ['name'],

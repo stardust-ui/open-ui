@@ -1,12 +1,12 @@
 import React from 'react'
 import _ from 'lodash'
-import { componentsByOpenuiName } from '../research'
+import { componentsByName } from '../research'
 
 const ComponentCoverage = ({ component }) => (
   <ul>
-    {_.get(componentsByOpenuiName, component).map(component => (
-      <li key={component.source}>
-        {component.name} ({component.source})
+    {_.map(_.get(componentsByName, component), component => (
+      <li key={component.sourceName}>
+        {component.name} ({component.sourceName})
       </li>
     ))}
   </ul>

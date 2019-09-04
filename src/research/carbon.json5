@@ -211,8 +211,9 @@
     },
     {
       name: 'Toggle',
+      openUIName: 'Switch',
       category: 'components',
-      url: 'https://www.carbondesignsystem.com/components/toggle/code',
+      url: 'https://www.carbondesignsystem.com/components/toggle/code'
     },
     {
       name: 'Tooltip',

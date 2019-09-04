@@ -1,9 +1,9 @@
 import React from 'react'
 import _ from 'lodash'
-import { sourceNames, getSourcesWithConcept } from '../research'
+import { sourceNames, getSourcesWithComponentConcept } from '../research'
 
 const ConceptCoverage = ({ component, concept }) => {
-  const withConcept = getSourcesWithConcept(component, concept)
+  const withConcept = getSourcesWithComponentConcept(component, concept)
   const withoutConcept = _.difference(sourceNames, withConcept)
   return (
     <div style={{ display: 'inline-flex', verticalAlign: 'middle' }}>

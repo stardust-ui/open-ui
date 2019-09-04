@@ -68,8 +68,9 @@
     },
     {
       name: 'Toggle',
+      openUIName: 'Switch',
       url: 'https://developer.microsoft.com/en-us/fabric#/controls/web/toggle',
-      category: 'Basic Inputs',
+      category: 'Basic Inputs'
     },
     {
       name: 'Calendar',
