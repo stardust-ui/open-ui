@@ -140,6 +140,7 @@
     },
     {
       name: 'Switches',
+      openUIName: 'Switch',
       url: 'https://material.io/components/web/catalog/input-controls/switches',
       category: 'Components',
       anatomy: [

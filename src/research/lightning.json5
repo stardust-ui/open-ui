@@ -108,6 +108,7 @@
     },
     {
       name: 'Checkbox Toggle',
+      openUIName: 'Switch',
       url: 'https://www.lightningdesignsystem.com/components/checkbox-toggle',
       category: 'Component Blueprints',
       concepts: [
