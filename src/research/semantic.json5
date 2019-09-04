@@ -36,7 +36,7 @@
         {
           name: 'icon',
           description: 'A button can have only an icon.',
-          image: 'sui-button-labeled.png',
+          image: 'sui-button-icon.png',
         },
         {
           name: 'labeled icon',
@@ -46,7 +46,7 @@
         {
           name: 'basic',
           description: 'A basic button is less pronounced',
-          image: 'sui-button-labeled-icon.png',
+          image: 'sui-button-basic.png',
         },
         {
           name: 'inverted',
@@ -61,12 +61,12 @@
         {
           name: 'icon buttons',
           description: 'Buttons can exist together as a group',
-          image: 'sui-button-buttons.png',
+          image: 'sui-button-icon-buttons.png',
         },
         {
           name: 'or',
           description: 'Button groups can contain conditionals.',
-          image: 'sui-button-buttons.png',
+          image: 'sui-button-or.png',
         },
         {
           name: 'active',

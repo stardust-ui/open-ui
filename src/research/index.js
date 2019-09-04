@@ -9,7 +9,7 @@ import evergreen from './evergreen.json5'
 import fabric from './fabric.json5'
 import fast from './fast.json5'
 import lightning from './lightning.json5'
-import material from './material.json5'
+import materialComponentsWeb from './materialComponentsWeb.json5'
 import semantic from './semantic.json5'
 import stardust from './stardust.json5'
 import w3 from './w3.json5'
@@ -25,11 +25,30 @@ export const sources = [
   fabric,
   fast,
   lightning,
-  material,
+  materialComponentsWeb,
   semantic,
   stardust,
   w3,
-]
+].map(source => ({
+  ...source,
+  components: source.components.map(component => {
+    const componentOpenUIName = component.openUIName || component.name
+    return {
+      ...component,
+      sourceName: source.name,
+      openUIName: componentOpenUIName,
+      concepts: _.map(component.concepts, concept => {
+        const conceptOpenUIName = concept.openUIName || concept.name
+        return {
+          ...concept,
+          sourceName: source.name,
+          componentName: componentOpenUIName,
+          openUIName: conceptOpenUIName,
+        }
+      }),
+    }
+  }),
+}))
 
 export const sourceNames = _.map(sources, 'name')
 export const sourcesCount = sources.length
@@ -37,28 +56,20 @@ export const sourceComponentConceptMap = sources.reduce((acc, src) => {
   acc[src.name] = {}
 
   _.forEach(src.components, comp => {
-    acc[src.name][comp.name] = {}
+    acc[src.name][comp.openUIName] = {}
 
     _.forEach(comp.concepts, con => {
-      acc[src.name][comp.name][con.name] = con
+      acc[src.name][comp.openUIName][con.openUIName] = con
     })
   })
 
   return acc
 }, {})
 
-export const doesSourceHaveComponentConcept = (sourceName, componentName, conceptName) => {
-  return _.has(sourceComponentConceptMap, [sourceName, componentName, conceptName])
-}
-export const doesSourceHaveComponentAnatomy = (sourceName, componentName, conceptName) => {
-  return _.has(sourceComponentConceptMap, [sourceName, componentName, conceptName])
-}
-
 // Components
-export const components = _.flatMap(sources, 'components')
-export const componentNames = _.map(components, 'name')
-export const componentNamesUnique = _.uniq(componentNames)
-export const componentsByName = _.groupBy(components, 'name')
+const componentList = _.flatMap(sources, 'components')
+export const componentOriginalNames = _.map(componentList, 'name')
+export const componentsByName = _.groupBy(componentList, 'openUIName')
 
 // Anatomies
 export const anatomiesByComponent = _.mapValues(componentsByName, components =>
@@ -66,30 +77,19 @@ export const anatomiesByComponent = _.mapValues(componentsByName, components =>
 )
 
 // Concepts
-export const concepts = _.compact(_.flatMap(components, 'concepts'))
-export const conceptNames = _.uniq(_.map(concepts, 'name'))
-export const conceptsByName = _.groupBy(concepts, 'name')
-export const conceptsByComponent = components.reduce((acc, next) => {
-  acc[next.name] = acc[next.name] || []
+const conceptList = _.compact(_.flatMap(componentList, 'concepts'))
 
-  _.forEach(next.concepts, concept => {
-    if (!_.find(acc[next.name], { name: concept.name })) {
-      acc[next.name].push(concept)
-    }
-  })
-  acc[next.name] = _.sortBy(acc[next.name], 'name')
-  return acc
-}, {})
+export const conceptsByComponent = _.mapValues(_.groupBy(conceptList, 'componentName'), concepts =>
+  _.groupBy(concepts, 'openUIName'),
+)
+
+export const getSourcesWithComponentConcept = (componentOpenUIName, conceptOpenUIName) => {
+  return _.map(_.get(conceptsByComponent, [componentOpenUIName, conceptOpenUIName]), 'sourceName')
+}
 
 // Images
-export const getImagesForComponentConcept = (componentName, conceptName) => {
-  return components
-    .reduce((acc, { name, concepts }) => {
-      if (name === componentName) {
-        return acc.concat(_.map(_.filter(concepts, { name: conceptName }), 'image'))
-      }
-
-      return acc
-    }, [])
-    .filter(Boolean)
+export const getImagesForComponentConcept = (componentOpenUIName, conceptOpenUIName) => {
+  return _.compact(
+    _.map(_.get(conceptsByComponent, [componentOpenUIName, conceptOpenUIName]), 'image'),
+  )
 }

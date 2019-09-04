@@ -1,14 +1,21 @@
 import React from 'react'
 
-const Image = ({ src, alt = 'An image.' }) => {
+const Image = ({ src, alt = src, ...rest }) => {
+  let imageData
+  try {
+    imageData = require(`../public/images/${src}`)
+  } catch(error) {
+  }
+
   return (
     <img
       alt={alt}
-      src={require(`../public/images/${src}`)}
+      src={imageData}
       style={{
         display: 'inline-block',
         zoom: 0.5,
       }}
+      {...rest}
     />
   )
 }

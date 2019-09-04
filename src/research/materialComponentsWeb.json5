@@ -1,8 +1,9 @@
 {
   $schema: '../schemas/design-system.schema.json5',
   lastUpdated: '2019-08-22',
-  name: 'Material Design',
+  name: 'Material Components Web',
   description: 'Material Design is a visual language that synthesizes the classic principles of good design with the innovation of technology and science.',
+  discipline: 'development',
   url: 'https://material.io',
   by: 'Google',
   components: [
@@ -139,8 +140,30 @@
     },
     {
       name: 'Switches',
+      openUIName: 'Switch',
       url: 'https://material.io/components/web/catalog/input-controls/switches',
       category: 'Components',
+      anatomy: [
+        { name: 'thumb' },
+        { name: 'track' },
+      ],
+      concepts: [
+        {
+          name: 'basic',
+          description: '',
+          image: 'material-components-web-switch-basic.png',
+        },
+        {
+          name: 'checked',
+          description: '',
+          image: 'material-components-web-switch-checked.png',
+        },
+        {
+          name: 'disabled',
+          description: '',
+          image: 'material-components-web-switch-disabled.png',
+        },
+      ]
     },
     {
       name: 'Text Field',
