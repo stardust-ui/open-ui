@@ -3,6 +3,31 @@
   "description": "Open UI documentation.",
   "version": "1.0.0",
   "author": "Open UI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christopherbiscardi/gatsby-starter-mdx-basic"
+  },
+  "keywords": ["open ui"],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "nodemon -w package.json -w gatsby-config.es.js -w gatsby-config.js -w gatsby-node.js --exec \"gatsby develop\"",
+    "start": "yarn develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "**/*.js": ["prettier --write", "git add"],
+    "**/*.{json,json5}": ["prettier --parser json --write", "git add"],
+    "**/*.md": ["prettier --parser markdown --write", "git add"],
+    "**/*.mdx": ["prettier --parser mdx --write", "git add"]
+  },
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "@fortawesome/fontawesome-svg-core": "^1.2.22",
@@ -17,6 +42,7 @@
     "gatsby-plugin-mdx": "^1.0.33",
     "gatsby-plugin-offline": "^2.2.4",
     "gatsby-plugin-react-helmet": "^3.1.3",
+    "gatsby-plugin-remove-trailing-slashes": "^2.1.4",
     "gatsby-plugin-sharp": "2.2.14",
     "gatsby-plugin-theme-ui": "^0.2.38",
     "gatsby-plugin-typography": "^2.3.5",
@@ -33,27 +59,15 @@
     "theme-ui": "^0.2.38",
     "typography": "^0.16.19"
   },
-  "keywords": ["open ui"],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "nodemon -w package.json -w gatsby-config.es.js -w gatsby-config.js -w gatsby-node.js --exec \"gatsby develop\"",
-    "start": "yarn develop",
-    "format": "prettier --write \"src/**/*.js\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/register": "^7.5.5",
-    "gatsby-plugin-remove-trailing-slashes": "^2.1.4",
+    "husky": "^3.0.5",
     "json5": "^2.1.0",
     "json5-loader": "^3.0.0",
+    "lint-staged": "^9.2.5",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/christopherbiscardi/gatsby-starter-mdx-basic"
   }
 }
