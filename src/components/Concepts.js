@@ -7,12 +7,12 @@ import Specimens from './Specimens'
 const Concepts = ({ component }) => {
   return (
     <div>
-      {_.map(conceptsByComponent[component], (c, i) => (
-        <div key={i}>
+      {_.map(conceptsByComponent[component], (concept, conceptOpenuiName) => (
+        <div key={conceptOpenuiName}>
           <h3>
-            {c.name} <ConceptCoverage component={component} concept={c.name} />
+            {conceptOpenuiName} <ConceptCoverage component={component} concept={conceptOpenuiName} />
           </h3>
-          <Specimens component={component} concept={c.name} />
+          <Specimens component={component} concept={conceptOpenuiName} />
         </div>
       ))}
     </div>
