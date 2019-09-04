@@ -474,8 +474,14 @@
       discipline: 'development',
       concepts: [
         {
+        	name: 'basic',
+        	description: 'Basic checkbox',
+        	image: 'antd-checkbox-basic.png',
+        },
+        {
           name: 'autoFocus',
           description: 'get focus when component mounted',
+          image: 'antd-checkbox-autofocus.png'
         },
         {
           name: 'checked',
@@ -490,6 +496,7 @@
         {
           name: 'indeterminate',
           description: 'indeterminate checked state of checkbox',
+          image: 'antd-checkbox-indeterminate.png'
         },
       ],
     },
