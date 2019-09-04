@@ -17,7 +17,7 @@ const ConceptCoverage = ({ component, concept }) => {
             color: 'white',
             fontSize: 10,
             textTransform: 'uppercase',
-            background: '#6C6'
+            background: '#6C6',
           }}
           title={sourceName}
         />
@@ -33,7 +33,7 @@ const ConceptCoverage = ({ component, concept }) => {
             color: 'white',
             fontSize: 10,
             textTransform: 'uppercase',
-            background: '#C66'
+            background: '#C66',
           }}
           title={sourceName}
         />

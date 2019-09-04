@@ -1,3 +1,5 @@
+const _ = require('lodash')
+
 exports.onCreateWebpackConfig = ({ actions }) => {
   actions.setWebpackConfig({
     module: {
@@ -9,4 +11,15 @@ exports.onCreateWebpackConfig = ({ actions }) => {
       ],
     },
   })
+}
+
+exports.onCreatePage = ({ page, actions }) => {
+  const { createPage, deletePage } = actions
+  const newPath = _.get(page.context, 'frontmatter.path')
+
+  if (newPath && page.path !== newPath) {
+    deletePage(page)
+    page.path = newPath
+    createPage(page)
+  }
 }

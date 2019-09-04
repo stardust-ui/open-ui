@@ -1,6 +1,16 @@
-> **Tip:** This repo is in development. Ideas and patterns you'll see here are in-progress. You are encouraged to join in and help shape the foundation of Stardust UI.
+> **Tip:** This repo is in development. Ideas and patterns you'll see here are in-progress. You are encouraged to join in and help shape the foundation of Open UI.
 
-# Stardust UI
+# Open UI
+
+## Development
+
+Clone this repo, then:
+
+```sh
+yarn            # install
+yarn start      # develop locally
+yarn build      # build for production
+```
 
 **:rocket: Mission:** Maintain an open standard for UI and promote its adherence and adoption.
 
@@ -16,7 +26,7 @@ We identify these issues in the UI community:
 - **Portability** - The lack of a shared language for UI limits our ability as a community to communicate, collaborate, and share.
 - **Timing** - UI's have existed long enough to observe and codify a shared standard; the time is right.
 
-Stardust UI recognizes a large opportunity for the open source community to make a meaningful difference around these issues.
+Open UI recognizes a large opportunity for the open source community to make a meaningful difference around these issues.
 
 ## How?
 
@@ -30,7 +40,7 @@ We intend to produce two sets of deliverables: specifications and utilities. The
 
 ### Focus Areas
 
-Stardust UI is currently focused on providing [deliverables](#deliverables) for these areas:
+Open UI is currently focused on providing [deliverables](#deliverables) for these areas:
 
 - UI Component Anatomy
 - Design Language
@@ -40,7 +50,7 @@ Stardust UI is currently focused on providing [deliverables](#deliverables) for 
 
 ## Supporters
 
-We're gathering support from teams and companies who believe in open source and who have a vision for the future of UI's. You can support Stardust UI by implementing the standards and utilities or by contributing.
+We're gathering support from teams and companies who believe in open source and who have a vision for the future of UI's. You can support Open UI by implementing the standards and utilities or by contributing.
 
 ### [:point_right: <kbd>JOIN NOW</kbd>][1]
 
