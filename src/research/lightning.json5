@@ -108,8 +108,31 @@
     },
     {
       name: 'Checkbox Toggle',
+      openUIName: 'Switch',
       url: 'https://www.lightningdesignsystem.com/components/checkbox-toggle',
       category: 'Component Blueprints',
+      concepts: [
+        {
+          name: 'basic',
+          description: '',
+          image: 'lighting-toggle-basic.png',
+        },
+        {
+          name: 'checked',
+          description: '',
+          image: 'lighting-toggle-checked.png',
+        },
+        {
+          name: 'disabled',
+          description: '',
+          image: 'lighting-toggle-disabled.png',
+        },
+        {
+          name: 'label',
+          description: '',
+          image: 'lighting-toggle-label.png',
+        },
+      ],
     },
     {
       name: 'Color Picker',
