@@ -561,10 +561,17 @@
       discipline: 'development',
     },
     {
-      name: 'Switch',
+      name: 'Toggle', // TODO rename this to Switch!
       url: 'https://ant.design/components/switch',
       category: 'Data Entry',
       discipline: 'development',
+      anatomy: [
+        { name: 'checkedContent' },
+        { name: 'uncheckedContent' },
+        { name: 'root', implicit: true },
+        { name: 'thumb', implicit: true },
+        { name: 'loadingContent', implicit: true},
+      ],
       description: 'Switching Selector. When To Use: If you need to represent the switching between two states or on-off state. The difference between Switch and Checkbox is that Switch will trigger a state change directly when you toggle it, while Checkbox is generally used for state marking, which should work in conjunction with submit operation.',
       concepts: [
         { name: 'autoFocus', description: 'get focus when component mounted' },
@@ -594,7 +601,6 @@
           description: 'content to be shown when the state is unchecked',
           image: 'antd-switch-uncheckedchildren.png',
         },
-        { name: 'className', description: 'additional class to Switch' },
       ],
     },
     {
