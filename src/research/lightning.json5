@@ -113,9 +113,9 @@
       category: 'Component Blueprints',
       concepts: [
         {
-        	name: 'basic',
-        	description: 'Basic toggle',
-        	image: 'lighting-toggle-basic.png',
+          name: 'basic',
+          description: 'Basic toggle',
+          image: 'lighting-toggle-basic.png',
         },
         {
           name: 'checked',
