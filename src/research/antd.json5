@@ -561,7 +561,7 @@
       discipline: 'development',
     },
     {
-      name: 'Toggle', // TODO rename this to Switch!
+      name: 'Switch',
       url: 'https://ant.design/components/switch',
       category: 'Data Entry',
       discipline: 'development',
@@ -601,9 +601,16 @@
           image: 'antd-switch-loading.png',
         },
         {
-          name: 'size',
+          name: 'default',
+          category: 'size',
+          description: 'the size of the Switch: default',
+          image: 'antd-switch-size-default.png',
+        },
+				{
+          name: 'small',
+          category: 'size',
           description: 'the size of the Switch, options: default small	string',
-          image: 'antd-switch-size.png',
+          image: 'antd-switch-size-small.png',
         },
         {
           name: 'unCheckedChildren',
