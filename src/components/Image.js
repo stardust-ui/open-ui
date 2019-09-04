@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Image = ({ src, alt = 'An image.' }) => {
+const Image = ({ src, alt = 'An image.', ...rest }) => {
   return (
     <img
       alt={alt}
@@ -9,6 +9,7 @@ const Image = ({ src, alt = 'An image.' }) => {
         display: 'inline-block',
         zoom: 0.5,
       }}
+      {...rest}
     />
   )
 }
