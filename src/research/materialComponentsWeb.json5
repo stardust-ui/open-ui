@@ -1,7 +1,7 @@
 {
   $schema: '../schemas/design-system.schema.json5',
   lastUpdated: '2019-08-22',
-  name: 'Material UI Web',
+  name: 'Material Components Web',
   description: 'Material Design is a visual language that synthesizes the classic principles of good design with the innovation of technology and science.',
   discipline: 'development',
   url: 'https://material.io',
@@ -150,18 +150,18 @@
       concepts: [
         {
           name: 'basic',
-          description: 'Basic switch',
-          image: 'material-ui-web-switch-basic.png',
+          description: '',
+          image: 'material-components-web-switch-basic.png',
         },
         {
           name: 'checked',
-          description: 'Checked switch',
-          image: 'material-ui-web-switch-checked.png',
+          description: '',
+          image: 'material-components-web-switch-checked.png',
         },
         {
           name: 'disabled',
-          description: 'Disabled switch',
-          image: 'material-ui-web-switch-disabled.png',
+          description: '',
+          image: 'material-components-web-switch-disabled.png',
         },
       ]
     },
