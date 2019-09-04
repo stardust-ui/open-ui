@@ -360,11 +360,11 @@
       concepts: [
         { name: 'basic', description: 'basic toggle', image: 'atlaskit-toggle-basic.png', },
       	{ name: 'checked', description: 'Whether the toggle is checked or not', image: 'atlaskit-toggle-checked.png' },
-      	{ name: 'disabled', description: 'Whether the toggle is disabled or not. This will prevent any interaction with the user', },
+      	{ name: 'disabled', description: 'Whether the toggle is disabled or not. This will prevent any interaction with the user', image: 'atlaskit-toggle-disabled.png', },
       	{ name: 'label', description: 'Label to be set for accessibility', },
       	{ name: 'name', description: 'Descriptive name for value property to be submitted in a form', },
       	{ name: 'value', description: 'The value to be submitted in a form.', },
-      	{ name: 'size', description: 'Defines the size of the toggle.', },
+      	{ name: 'size', description: 'Defines the size of the toggle.', image: 'atlaskit-toggle-size.png', },
       ],
     },
     {
