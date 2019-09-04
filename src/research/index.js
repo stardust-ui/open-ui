@@ -67,9 +67,9 @@ export const sourceComponentConceptMap = sources.reduce((acc, src) => {
 }, {})
 
 // Components
-export const components = _.flatMap(sources, 'components')
-export const componentOriginalNames = _.map(components, 'name')
-export const componentsByName = _.groupBy(components, 'openUIName')
+const componentList = _.flatMap(sources, 'components')
+export const componentOriginalNames = _.map(componentList, 'name')
+export const componentsByName = _.groupBy(componentList, 'openUIName')
 
 // Anatomies
 export const anatomiesByComponent = _.mapValues(componentsByName, components =>
@@ -77,9 +77,9 @@ export const anatomiesByComponent = _.mapValues(componentsByName, components =>
 )
 
 // Concepts
-export const concepts = _.compact(_.flatMap(components, 'concepts'))
+const conceptList = _.compact(_.flatMap(componentList, 'concepts'))
 
-export const conceptsByComponent = _.mapValues(_.groupBy(concepts, 'componentName'), concepts =>
+export const conceptsByComponent = _.mapValues(_.groupBy(conceptList, 'componentName'), concepts =>
   _.groupBy(concepts, 'openUIName'),
 )
 
