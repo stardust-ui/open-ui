@@ -12,28 +12,34 @@ const Layout = ({ children }) => (
         site {
           siteMetadata {
             title
+            githubURL
           }
         }
       }
     `}
     render={data => (
       <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div style={{ display: 'flex', margin: '0px auto', maxWidth: '1200px' }}>
-          <Navigation
-            style={{
-              flex: '0 0 auto',
-              width: '200px',
-            }}
-          />
-          <div
-            style={{
-              flex: 1,
-              padding: '0px 1.0875rem 1.45rem',
-            }}
-          >
-            {children}
-          </div>
+        <Header
+          siteTitle={data.site.siteMetadata.title}
+          githubURL={data.site.siteMetadata.githubURL}
+        />
+        <div
+          style={{
+            display: 'grid',
+            gridGap: '2em',
+            gridTemplate: `
+              "nav  view" auto /
+               auto 1fr
+            `,
+            padding: '0 1rem',
+            margin: '0 auto',
+            maxWidth: '1200px',
+            gridAutoFlow: 'rows',
+          }}
+        >
+          <Navigation style={{ gridArea: 'nav' }} />
+
+          <div style={{ gridArea: 'view' }}>{children}</div>
         </div>
       </>
     )}

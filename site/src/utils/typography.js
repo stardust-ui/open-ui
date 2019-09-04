@@ -27,6 +27,13 @@ const typography = new Typography({
   boldWeight: 700,
   bodyGray: 0.2,
   bodyGrayHue: 'warm',
+
+  overrideThemeStyles: ({ rhythm }, options, styles) => ({
+    a: {
+      color: 'inherit',
+      textDecoration: 'none',
+    },
+  }),
 })
 
 export default typography

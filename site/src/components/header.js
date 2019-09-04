@@ -1,52 +1,42 @@
-import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
+import Logo from './Logo'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, githubURL }) => (
   <header
     style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
+      background: '#333',
+      marginBottom: '2rem',
+      color: '#eee',
     }}
   >
     <div
       style={{
-        background: 'rebeccapurple',
-        marginBottom: '1.45rem',
+        display: 'flex',
+        padding: '1rem',
+        margin: '0 auto',
+        maxWidth: 1200,
+        width: '100%',
+        justifyItems: 'space-between',
+        alignItems: 'center',
       }}
     >
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 1200,
-          padding: '1.45rem 1.0875rem',
-          display: 'flex',
-          justifyItems: 'space-between',
-          alignItems: 'center',
-        }}
-      >
-        <h1 style={{ margin: 0, flex: 1 }}>
-          <Link
-            to="/"
-            style={{
-              color: 'white',
-              textDecoration: 'none',
-            }}
-          >
-            {siteTitle}
-          </Link>
-        </h1>
-      </div>
+      <h1 style={{ flex: 1, margin: 0, fontSize: '1rem' }}>
+        <Logo siteTitle={siteTitle} />
+      </h1>
+
+      <a href={githubURL} target="_blank" rel="noreferrer noopener">
+        <FontAwesomeIcon style={{ marginRight: '0.2em' }} icon={faGithub} /> GitHub
+      </a>
     </div>
   </header>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: '',
+  siteTitle: PropTypes.string.isRequired,
+  githubURL: PropTypes.string.isRequired,
 }
 
 export default Header

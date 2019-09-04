@@ -6,6 +6,7 @@ module.exports = {
     title: 'Open UI',
     description: 'Open UI ',
     author: 'Open UI',
+    githubURL: 'https://github.com/stardust-ui/specifications',
   },
 
   plugins: [
@@ -43,8 +44,8 @@ module.exports = {
         name: 'gatsby-default-mdx-basic',
         short_name: 'starter',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#00a453',
+        theme_color: '#00a453',
         display: 'minimal-ui',
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
