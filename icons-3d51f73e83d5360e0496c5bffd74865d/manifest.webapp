@@ -1,0 +1,14 @@
+{
+  "version": "1.0",
+  "name": "open-ui-docs",
+  "description": null,
+  "icons": {
+    "60": "/icons-3d51f73e83d5360e0496c5bffd74865d/firefox_app_60x60.png",
+    "128": "/icons-3d51f73e83d5360e0496c5bffd74865d/firefox_app_128x128.png",
+    "512": "/icons-3d51f73e83d5360e0496c5bffd74865d/firefox_app_512x512.png"
+  },
+  "developer": {
+    "name": null,
+    "url": null
+  }
+}
