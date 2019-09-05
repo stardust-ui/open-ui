@@ -1,3 +1,11 @@
+# :warning: MOVED :warning:
+
+This effort has moved to the W3 as an incubator community group:
+
+See https://github.com/WICG/open-ui
+
+***
+
 > **Tip:** This repo is in development. Ideas and patterns you'll see here are in-progress. You are encouraged to join in and help shape the foundation of Open UI.
 
 # Open UI
