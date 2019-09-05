@@ -2,16 +2,6 @@
 
 # Open UI
 
-## Development
-
-Clone this repo, then:
-
-```sh
-yarn            # install
-yarn start      # develop locally
-yarn build      # build for production
-```
-
 **:rocket: Mission:** Maintain an open standard for UI and promote its adherence and adoption.
 
 **:busts_in_silhouette: Audience:** The broader UI community including designers, engineers, and managers.
@@ -70,7 +60,6 @@ Make sure you have [Node.js][2] version v8 or later installed.
 yarn start                 // run doc site
 
 yarn build                 // build docs
-yarn deploy                // deploy gh-pages doc site
 ```
 
 <!-- A Pre-filled issue template to join -->
