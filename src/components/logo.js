@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from './Image'
+import Image from './image'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 

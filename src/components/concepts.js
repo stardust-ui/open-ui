@@ -1,8 +1,8 @@
 import React from 'react'
 import _ from 'lodash'
 import { conceptsByComponent } from '../research'
-import ConceptCoverage from './ConceptCoverage'
-import Specimens from './Specimens'
+import ConceptCoverage from './concept-coverage'
+import Specimens from './specimens'
 
 const Concepts = ({ component }) => {
   return (
